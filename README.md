@@ -6,12 +6,12 @@ sottotitolo nel caso il titolo non sia completamente autoesplicativo.
 ## Descrizione del problema
 Una breve descrizione del tema che volete investigare, del problema che volete risolvere
 
-●	Comprendere le motivazioni delle proteste degli agricoltori da Novembre 2023
-●	Cambiamento climatico e ricadute sulle politiche agricole europee (basandoci più che attraverso l’analisi dei dati che raccoglieremo, sui report che hanno portato all’ideazione del Green Deal).
-●	Analizzare il sentiment in relazione a diversi attori: agricoltori/trici, politici/che, media - questo verrà condotto su social media quali FB, Twitter, Reddit, Telegram, YouTube sui verbali del Parlamento Europeo, sui giornali.
-●	Previsione degli effetti dell’agricoltura in base alle misure del Green Deal.
-●	Cercare di fare chiarezza sulla diffusione geografica delle proteste - e cercare possibili relazioni (e.g., superficie coltivata/presenza di presidi e proteste; condizioni salariali; costi di produzione e guadagni; risultati delle europee 2024; immagini satellitari e mobilità).
-●	Land usage - tramite immagini satellitari
+- Comprendere le motivazioni delle proteste degli agricoltori da Novembre 2023
+- Cambiamento climatico e ricadute sulle politiche agricole europee (basandoci più che attraverso l’analisi dei dati che raccoglieremo, sui report che hanno portato all’ideazione del Green Deal).
+-	Analizzare il sentiment in relazione a diversi attori: agricoltori/trici, politici/che, media - questo verrà condotto su social media quali FB, Twitter, Reddit, Telegram, YouTube sui verbali del Parlamento Europeo, sui giornali.
+-	Previsione degli effetti dell’agricoltura in base alle misure del Green Deal.
+-	Cercare di fare chiarezza sulla diffusione geografica delle proteste - e cercare possibili relazioni (e.g., superficie coltivata/presenza di presidi e proteste; condizioni salariali; costi di produzione e guadagni; risultati delle europee 2024; immagini satellitari e mobilità).
+-	Land usage - tramite immagini satellitari
 
 
 ## Motivazione
@@ -19,10 +19,10 @@ Una spiegazione del perché pensate che la questione sia importante e quale live
 attualità/novità pensate abbia. Pensate a un elenco iniziale di domande a cui il vostro
 lavoro andrà a rispondere
 
-●	Tema di grande attualità
-●	Ci piacciono i trattori 
-●	Fare chiarezza su un tema che è molto poco chiaro e sbilanciato per motivi di rappresentazione (l’impressione è quella che alle persone in agricoltura venga tolta la voce, più che data). 
-●	Capire se le politiche europee rappresentano effettivamente una soluzione alla questione ambientale oppure se mettono ancora di più in pericolo il settore agricolo.
+-	Tema di grande attualità
+-	Ci piacciono i trattori 
+-	Fare chiarezza su un tema che è molto poco chiaro e sbilanciato per motivi di rappresentazione (l’impressione è quella che alle persone in agricoltura venga tolta la voce, più che data). 
+-	Capire se le politiche europee rappresentano effettivamente una soluzione alla questione ambientale oppure se mettono ancora di più in pericolo il settore agricolo.
 
 ## Pubblico
 Descrizione del vostro pubblico target previsto. Ipotizzate un organo di stampa a cui
@@ -37,9 +37,9 @@ contromisure da adottare. Questo passaggio è fondamentale nella prima fase di
 progettazione perché se ben fatto vi mette al riparo da colli di bottiglia
 nell’avanzamento dei lavori.
 
-●	La vastità del tema potrebbe costituire un limite, sebbene sia anche il suo punto di forza
-●	Disponibilità dei dati, soprattutto dai social. 
-●	Essere in grado di delimitare il campo di ricerca quando necessario, soprattutto in relazione alla presenza o raggiungibilità dei dati.
+-	La vastità del tema potrebbe costituire un limite, sebbene sia anche il suo punto di forza
+-	Disponibilità dei dati, soprattutto dai social. 
+-	Essere in grado di delimitare il campo di ricerca quando necessario, soprattutto in relazione alla presenza o raggiungibilità dei dati.
 
 ## Lavoro correlato
 Un elenco di lavori esistenti (almeno 4) sull'argomento con una breve descrizione dei
@@ -50,13 +50,13 @@ punti di forza e debolezza di ciascuno.
 Un'indicazione dei corsi le cui competenze sono probabilmente utilizzate
 nell'implementazione del progetto.
 
-●	Crowdsource, crowdsensing
-●	Information Retrieval
-●	Data Mining & Machine Learning / Deep Learning 
-●	Data Journalism
-●	Text Analysis
-●	Data Ethics 
-●	Social Network Analysis
+-	Crowdsource, crowdsensing
+-	Information Retrieval
+-	Data Mining & Machine Learning / Deep Learning 
+-	Data Journalism
+-	Text Analysis
+-	Data Ethics 
+-	Social Network Analysis
 
 
 
@@ -66,30 +66,30 @@ interesse e in che modo intendete arricchirli.
 
 Documenti
 
-●	Social media (Facebook, Twitter (soprattutto per la mappatura), Reddit  (?))
-●	Verbali del Parlamento Europeo
-●	Giornali 
+-	Social media (Facebook, Twitter (soprattutto per la mappatura), Reddit  (?))
+-	Verbali del Parlamento Europeo
+-	Giornali 
 
 Dataset
 
-●	Sito Istat (Ci sono dataset scaricabili)
-●	ISMEA mercati
-●	Kaggle (ma ricontrollare)
-●	eudata 
-●	RICA e CREA (Centri di ricerca in ambito agricolo)
-●	Geoscopio (?)
+-	Sito Istat (Ci sono dataset scaricabili)
+-	ISMEA mercati
+-	Kaggle (ma ricontrollare)
+-	eudata 
+-	RICA e CREA (Centri di ricerca in ambito agricolo)
+-	Geoscopio (?)
 
 
 ## Metodi
 Una spiegazione delle tecniche utilizzate per analizzare il problema, preferibilmente
 sotto forma di una pipeline che descriva le varie fasi. Quali difficoltà prevedete di
 incontrare e quindi affrontare nello sviluppo del progetto.
-●	Classificatore - Per vedere quali partiti europei si sono occupati di più della questione dell’agricoltura, e verificare se si tratta del PPE (e.g., dato l’intervento, si valuta se è stato condotto da un membro del PPE)
-●	Classificatore - Utenti social media (in base a parametri da valutare)
-●	Previsione rispetto all’impatto delle politiche agricole EU 
-●	Data Visualisation tecniche
-●	Sentiment Analysis - 
-●	Textual Analysis - 
+-	Classificatore - Per vedere quali partiti europei si sono occupati di più della questione dell’agricoltura, e verificare se si tratta del PPE (e.g., dato l’intervento, si valuta se è stato condotto da un membro del PPE)
+-	Classificatore - Utenti social media (in base a parametri da valutare)
+-	Previsione rispetto all’impatto delle politiche agricole EU 
+-	Data Visualisation tecniche
+-	Sentiment Analysis - 
+-	Textual Analysis - 
 
 In tutti i casi la pipeline sarà costituita da momenti di raccolta e lavorazione dei dati. 
 
@@ -99,12 +99,12 @@ conoscenza, discutere l'approccio analitico, convalidare i risultati emersi dall
 analisi e arricchire la vostra narrazione. Gli esperti di dominio sono utili per aiutarvi ad
 inquadrare gli aspetti più qualitativi del problema.
 
-●	Giornalista Altreconomia: 
-●	Ricercatrice Normale: Irina Aguilari
-●	Prof. Politica Alimentare: R. Galli
-●	Prof. Politica Alimentare: Gianluca Brunori
-●	Agricoltori (Decidere se questionari da compilare oppure interviste la cui trascrizione potrebbe essere  utilizzata per fare text analysis e utilizzata per la classificazione)
-●	Sindacalisti (?) 
+-	Giornalista Altreconomia: 
+-	Ricercatrice Normale: Irina Aguilari
+-	Prof. Politica Alimentare: R. Galli
+-	Prof. Politica Alimentare: Gianluca Brunori
+-	Agricoltori (Decidere se questionari da compilare oppure interviste la cui trascrizione potrebbe essere  utilizzata per fare text analysis e utilizzata per la classificazione)
+-	Sindacalisti (?) 
 
 
 ## Risultati attesi
@@ -114,15 +114,15 @@ descrivendo quale sarà il valore aggiunto di queste scelte (quest’ultimo sugg
 è utile soprattutto quando si arriva al primo avanzamento, in fase di proposta può
 essere solo accennato)
 
-●	Le proteste sono più concentrate su aree più interessate dall’industria agricola?
-●	Quali sono le principali preoccupazioni degli agricoltori riguardo al Green Deal e alle politiche agricole europee?
-●	Come viene percepito il Green Deal e le politiche agricole dai diversi attori coinvolti, inclusi agricoltori, politici e media?
-●	Qual è la distribuzione a livello geografico? 
-●	Come è cambiata la topografia del territorio agricolo vedendo i dati satellitari?
-●	Quali sono i modelli di sentimenti espressi sui social media riguardo alle politiche agricole e al Green Deal, e come si correlano con le proteste degli agricoltori?
-●	Quale è il sentiment generale su tutti i livelli degli attori coinvolti (operai, politici, media, persone)?
-●	Come cambieranno le produzioni agricole con l’implementazione delle politiche della PAC 23-27? 
-●	Evoluzione della superficie agricola e possibile relazione con fenomeni ambientali (eg. siccità etc) e sociali (e.g. costruzione di strade ed edifici)
+-	Le proteste sono più concentrate su aree più interessate dall’industria agricola?
+-	Quali sono le principali preoccupazioni degli agricoltori riguardo al Green Deal e alle politiche agricole europee?
+-	Come viene percepito il Green Deal e le politiche agricole dai diversi attori coinvolti, inclusi agricoltori, politici e media?
+-	Qual è la distribuzione a livello geografico? 
+-	Come è cambiata la topografia del territorio agricolo vedendo i dati satellitari?
+-	Quali sono i modelli di sentimenti espressi sui social media riguardo alle politiche agricole e al Green Deal, e come si correlano con le proteste degli agricoltori?
+-	Quale è il sentiment generale su tutti i livelli degli attori coinvolti (operai, politici, media, persone)?
+-	Come cambieranno le produzioni agricole con l’implementazione delle politiche della PAC 23-27? 
+-	Evoluzione della superficie agricola e possibile relazione con fenomeni ambientali (eg. siccità etc) e sociali (e.g. costruzione di strade ed edifici)
 
 
 ## Piano di attività
@@ -140,8 +140,8 @@ Next Steps:
 
 ## Valutazione
 I criteri per un’autovalutazione di ogni proposta sono i seguenti:
-● una descrizione chiara e concisa del metodo proposto
-● una revisione della letteratura che copre almeno 4 reference rilevanti
-● un piano di attività sostenibile
+- una descrizione chiara e concisa del metodo proposto
+- una revisione della letteratura che copre almeno 4 reference rilevanti
+- un piano di attività sostenibile
 La proposta di progetto dovrà essere consegnata entro le 23:59 del 5 aprile e visibile
 nel vostro repository GitHub come file readme.
