@@ -133,7 +133,8 @@ percorso e come pianificate di dividere il lavoro.
 Next Steps: 
 -	Diego, Gianluca = Scraping Social media, Parlamento
 -	Antonio = Land Use Change & mappe satellitari 
--	Riccardo = Esplorazione dati ISTAT 
+-	Riccardo = Esplorazione dati ISTAT
+-	Beatrice = Esplorazioni dati UE + confronto italiano (Green Deal e industria agrotecnica italiana, agevolazioni UE vs stipendi agricoltori, distribuzione dei fondi, spartizione dei benefici)
 
 
 
