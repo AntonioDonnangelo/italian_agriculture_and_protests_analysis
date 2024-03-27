@@ -145,4 +145,4 @@ I criteri per un’autovalutazione di ogni proposta sono i seguenti:
 - una revisione della letteratura che copre almeno 4 reference rilevanti
 - un piano di attività sostenibile
 La proposta di progetto dovrà essere consegnata entro le 23:59 del 5 aprile e visibile
-nel vostro repository GitHub come file readme.
+nel vostro repository GitHub come file readme
