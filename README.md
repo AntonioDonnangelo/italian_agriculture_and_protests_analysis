@@ -99,7 +99,7 @@ conoscenza, discutere l'approccio analitico, convalidare i risultati emersi dall
 analisi e arricchire la vostra narrazione. Gli esperti di dominio sono utili per aiutarvi ad
 inquadrare gli aspetti più qualitativi del problema.
 
--	Giornalista Altreconomia: 
+-	Giornalista Altreconomia: Duccio Facchini
 -	Ricercatrice Normale: Irina Aguilari
 -	Prof. Politica Alimentare: R. Galli
 -	Prof. Politica Alimentare: Gianluca Brunori
