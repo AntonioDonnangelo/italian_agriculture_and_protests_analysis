@@ -45,7 +45,7 @@ nell’avanzamento dei lavori.
 Un elenco di lavori esistenti (almeno 4) sull'argomento con una breve descrizione dei
 punti di forza e debolezza di ciascuno.
 
-- How Can the Green Deal Adapt to a Brutal World?
+- <i> How Can the Green Deal Adapt to a Brutal World? </i>
 by Marc-Antoine Eyl-Mazzega and Diana-Paula Gherasim (March 11, 2024), in Ifri Studies
 
 L’analisi si occupa di cercare le difficoltà di coprire una larga scala di problematiche intersecate tra loro con misure eccessivamente generalistiche e che non riflettono le peculiarità delle numerose situazioni europee. 
@@ -59,14 +59,14 @@ L’analisi, prendendo spunto da Politico Europe, guarda ai costi di produzione 
 PRO: valutare il peso economico che ricade sugli agricoltori è essenziale per comprendere la diffidenza nei confronti delle politiche europee.
 CONTRO: non c’è una vera e propria proposta risolutiva alle problematiche del green deal, se non linee guida generali derivanti da un preciso progetto economico e agricolo di difficile applicazione globale, per lo meno nel breve termine.
 
-- The European (Green?) Deal: a systematic analysis of environmental sustainability, in Sustainable Development, 32(1), 647–661.
-By Joan Hereu-Morales, lba Segarra, César Valderrama (July 4, 2023)
+- <i> The European (Green?) Deal: a systematic analysis of environmental sustainability </i>
+By Joan Hereu-Morales, lba Segarra, César Valderrama (July 4, 2023) in Sustainable Development, 32(1), 647–661.
 
 L’analisi è un tentativo di investigare se il EDG copre effettivamente la transizione economica ed ecologica di cui l’Europa ha bisogno. 
 PRO: l’analisi è estremamente accurata e problematizza anche gli aspetti semantici dei concetti di “sostenibilità” e “ambiente” che assumono sfumature diverse, dettando politiche non necessariamente compatibili e adatte. Le attente valutazioni consentono di affermare che diverse posizioni adottate dal Green Deal europeo non hanno le adeguate caratteristiche per garantire una equa ed efficiente transizione. 
 CONTRO: l’analisi ha un approccio più teoretico, necessitando una controparte di analisi dati che le manca. 
 
-- La protesta degli agricoltori ci riguarda. Perché a rimetterci siamo anche noi
+- <i> La protesta degli agricoltori ci riguarda. Perché a rimetterci siamo anche noi </i>
 Di Luca Pisapia (5 Febbraio, 2024), in Valori, notizie di finanza etica ed economia sostenibile (online)
 
 L’analisi è una riflessione sulle conseguenze sociali ed economiche del binomio proteste-Green Deal, visto sotto l’ottica del vigente sistema di mercato. 
