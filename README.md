@@ -52,7 +52,7 @@ L’analisi si occupa di cercare le difficoltà di coprire una larga scala di pr
 PRO: vengono messe in luce situazioni politiche e sociali che rendono la pianificazione del Green Deal eccessivamente astratta, mirando ad uno dei problemi legati alle applicazioni delle nuove normative europee in Italia.
 CONTRO: 
 
-- Più sostegno ai piccoli agricoltori nell’era del Green deal: le proposte di Deafal
+- <i> Più sostegno ai piccoli agricoltori nell’era del Green deal: le proposte di Deafal </i>
 di Aurora Petrini (28 Febbraio 2024), in Altreconomia
 
 L’analisi, prendendo spunto da Politico Europe, guarda ai costi di produzione in crescita che impattano sul ricavo delle piccole realtà agricole. 
