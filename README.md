@@ -45,6 +45,36 @@ nell’avanzamento dei lavori.
 Un elenco di lavori esistenti (almeno 4) sull'argomento con una breve descrizione dei
 punti di forza e debolezza di ciascuno.
 
+- How Can the Green Deal Adapt to a Brutal World?
+by Marc-Antoine Eyl-Mazzega and Diana-Paula Gherasim (March 11, 2024), in Ifri Studies
+
+L’analisi si occupa di cercare le difficoltà di coprire una larga scala di problematiche intersecate tra loro con misure eccessivamente generalistiche e che non riflettono le peculiarità delle numerose situazioni europee. 
+PRO: vengono messe in luce situazioni politiche e sociali che rendono la pianificazione del Green Deal eccessivamente astratta, mirando ad uno dei problemi legati alle applicazioni delle nuove normative europee in Italia.
+CONTRO: 
+
+- Più sostegno ai piccoli agricoltori nell’era del Green deal: le proposte di Deafal
+di Aurora Petrini (28 Febbraio 2024), in Altreconomia
+
+L’analisi, prendendo spunto da Politico Europe, guarda ai costi di produzione in crescita che impattano sul ricavo delle piccole realtà agricole. 
+PRO: valutare il peso economico che ricade sugli agricoltori è essenziale per comprendere la diffidenza nei confronti delle politiche europee.
+CONTRO: non c’è una vera e propria proposta risolutiva alle problematiche del green deal, se non linee guida generali derivanti da un preciso progetto economico e agricolo di difficile applicazione globale, per lo meno nel breve termine.
+
+- The European (Green?) Deal: a systematic analysis of environmental sustainability, in Sustainable Development, 32(1), 647–661.
+By Joan Hereu-Morales, lba Segarra, César Valderrama (July 4, 2023)
+
+L’analisi è un tentativo di investigare se il EDG copre effettivamente la transizione economica ed ecologica di cui l’Europa ha bisogno. 
+PRO: l’analisi è estremamente accurata e problematizza anche gli aspetti semantici dei concetti di “sostenibilità” e “ambiente” che assumono sfumature diverse, dettando politiche non necessariamente compatibili e adatte. Le attente valutazioni consentono di affermare che diverse posizioni adottate dal Green Deal europeo non hanno le adeguate caratteristiche per garantire una equa ed efficiente transizione. 
+CONTRO: l’analisi ha un approccio più teoretico, necessitando una controparte di analisi dati che le manca. 
+
+- La protesta degli agricoltori ci riguarda. Perché a rimetterci siamo anche noi
+Di Luca Pisapia (5 Febbraio, 2024), in Valori, notizie di finanza etica ed economia sostenibile (online)
+
+L’analisi è una riflessione sulle conseguenze sociali ed economiche del binomio proteste-Green Deal, visto sotto l’ottica del vigente sistema di mercato. 
+PRO: l’articolo vuole porre l’attenzione sullo stretto legame che c’è tra le proteste e le nostre abitudini di consumo, portano l’attenzione sulle motivazioni legate alle proteste.
+CONTRO: l’analisi è altresì molto libera e non supportata da fonti o ragionamenti meglio spiegati - ovviamente anche per il taglio che è stato voluto dare all’articolo, ma il rischio di sembrare di parte non si attenua. 
+
+
+
 
 ## Corsi
 Un'indicazione dei corsi le cui competenze sono probabilmente utilizzate
