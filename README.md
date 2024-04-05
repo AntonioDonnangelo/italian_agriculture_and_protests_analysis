@@ -6,7 +6,11 @@ sottotitolo nel caso il titolo non sia completamente autoesplicativo.
 ## Descrizione del problema
 Una breve descrizione del tema che volete investigare, del problema che volete risolvere
 
-- Comprendere le motivazioni delle proteste degli agricoltori da Novembre 2023
+Il problema da affrontare sono le proteste degli agricoltori che si sono avvicendate in Italia a partire da dicembre 2023. Vogliamo analizzarne le cause e l'effettivo stato dell'arte delle misure agroalimentari europee alla luce del nuovo Green Deal e della PAC 23/27.
+
+Questa analisi ha i seguenti obiettivi: 
+ 
+- Comprendere le motivazioni delle proteste degli agricoltori da Dicembre 2023
 - Cambiamento climatico e ricadute sulle politiche agricole europee (basandoci più che attraverso l’analisi dei dati che raccoglieremo, sui report che hanno portato all’ideazione del Green Deal).
 -	Analizzare il sentiment in relazione a diversi attori: agricoltori/trici, politici/che, media - questo verrà condotto su social media quali FB, Twitter, Reddit, Telegram, YouTube sui verbali del Parlamento Europeo, sui giornali.
 -	Previsione degli effetti dell’agricoltura in base alle misure del Green Deal.
@@ -19,8 +23,8 @@ Una spiegazione del perché pensate che la questione sia importante e quale live
 attualità/novità pensate abbia. Pensate a un elenco iniziale di domande a cui il vostro
 lavoro andrà a rispondere
 
--	Tema di grande attualità
 -	Ci piacciono i trattori 
+-	Tema di grande attualità
 -	Fare chiarezza su un tema che è molto poco chiaro e sbilanciato per motivi di rappresentazione (l’impressione è quella che alle persone in agricoltura venga tolta la voce, più che data). 
 -	Capire se le politiche europee rappresentano effettivamente una soluzione alla questione ambientale oppure se mettono ancora di più in pericolo il settore agricolo.
 
@@ -38,8 +42,9 @@ progettazione perché se ben fatto vi mette al riparo da colli di bottiglia
 nell’avanzamento dei lavori.
 
 -	La vastità del tema potrebbe costituire un limite, sebbene sia anche il suo punto di forza
--	Disponibilità dei dati, soprattutto dai social. 
+-	Disponibilità dei dati, soprattutto dai social (in particolare dobbiamo capire come fare scraping su Facebook). 
 -	Essere in grado di delimitare il campo di ricerca quando necessario, soprattutto in relazione alla presenza o raggiungibilità dei dati.
+-	Mantenere un approccio neutro e il più possibilie oggettivo nel contesto di un dibattito estremamente politicizzato. 
 
 ## Lavoro correlato
 Un elenco di lavori esistenti (almeno 4) sull'argomento con una breve descrizione dei
@@ -90,6 +95,8 @@ PRO: analisi precisa e fondamentale sugli effettivi effetti di alcune applicazio
 
 CONTRO: analisi che non copre altri aspetti legati alle problematiche o ai punti di forza del Green Deal. 
 
+ISTAT: 7 Censimento Agricolo [ https://7censimentoagricoltura.it/ ]
+
 
 ## Corsi
 Un'indicazione dei corsi le cui competenze sono probabilmente utilizzate
@@ -98,7 +105,7 @@ nell'implementazione del progetto.
 -	Crowdsource, crowdsensing
 -	Information Retrieval
 -	Data Mining & Machine Learning / Deep Learning 
--	Data Journalism
+-	Data Journalism & Visualisation
 -	Text Analysis
 -	Data Ethics 
 -	Social Network Analysis
@@ -111,7 +118,7 @@ interesse e in che modo intendete arricchirli.
 
 Documenti
 
--	Social media (Facebook, Twitter (soprattutto per la mappatura), Reddit  (?))
+-	Social media (Facebook, Twitter (soprattutto per la mappatura), Reddit (?), Telegram)
 -	Verbali del Parlamento Europeo
 -	Giornali 
 
@@ -122,13 +129,14 @@ Dataset
 -	Kaggle (ma ricontrollare)
 -	eudata 
 -	RICA e CREA (Centri di ricerca in ambito agricolo)
--	Geoscopio (?)
+-	Geoscopio 
 
 
 ## Metodi
 Una spiegazione delle tecniche utilizzate per analizzare il problema, preferibilmente
 sotto forma di una pipeline che descriva le varie fasi. Quali difficoltà prevedete di
 incontrare e quindi affrontare nello sviluppo del progetto.
+
 -	Classificatore - Per vedere quali partiti europei si sono occupati di più della questione dell’agricoltura, e verificare se si tratta del PPE (e.g., dato l’intervento, si valuta se è stato condotto da un membro del PPE)
 -	Classificatore - Utenti social media (in base a parametri da valutare)
 -	Previsione rispetto all’impatto delle politiche agricole EU 
@@ -138,7 +146,7 @@ incontrare e quindi affrontare nello sviluppo del progetto.
 
 In tutti i casi la pipeline sarà costituita da momenti di raccolta e lavorazione dei dati. 
 
-Esperti di dominio
+## Esperti di dominio
 Un'ipotesi di persone contattabili per interviste per approfondire il dominio di
 conoscenza, discutere l'approccio analitico, convalidare i risultati emersi dalla vostra
 analisi e arricchire la vostra narrazione. Gli esperti di dominio sono utili per aiutarvi ad
@@ -149,7 +157,7 @@ inquadrare gli aspetti più qualitativi del problema.
 -	Prof. Politica Alimentare: R. Galli
 -	Prof. Politica Alimentare: Gianluca Brunori
 -	Agricoltori (Decidere se questionari da compilare oppure interviste la cui trascrizione potrebbe essere  utilizzata per fare text analysis e utilizzata per la classificazione)
--	Sindacalisti (?) 
+-	Sindacalisti (da valutare) 
 
 
 ## Risultati attesi
@@ -175,7 +183,7 @@ Piano delle attività, compreso ciò che pianificate di completare entro la rela
 percorso e come pianificate di dividere il lavoro.
 
 
-Next Steps: 
+## Next Steps: 
 -	Diego, Gianluca = Scraping Social media, Parlamento
 -	Antonio = Land Use Change & mappe satellitari 
 -	Riccardo = Esplorazione dati ISTAT
