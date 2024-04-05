@@ -1,6 +1,8 @@
-# Agricolo
+# Titolo
 Scegliete un titolo giornalistico per il vostro progetto. È consigliabile creare anche un
 sottotitolo nel caso il titolo non sia completamente autoesplicativo.
+
+"Non si molla… e che Dio ci benedica!”. Le proteste degli agricoltori e il Green Deal Europeo visti attraverso i dati"
 
 
 ## Descrizione del problema
