@@ -19,6 +19,12 @@ driver = webdriver.Chrome(options=options)
 # apro la pagina
 driver.get(target_url)
 
+# gestione pop-up cookies 
+
+cookie_popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, '//*[@id="cookie-policy"]/div/div[2]/button[1]')))
+cookie_button = driver.find_element(By.XPATH, '//*[@id="cookie-policy"]/div/div[2]/button[1]')
+cookie_button.click()
+
 # cerco la barra per la query
 bar = driver.find_element(By.ID, 'criteriaSidesMiText')
 # inserisco la query, seleziono il bottone di invio e clicco
