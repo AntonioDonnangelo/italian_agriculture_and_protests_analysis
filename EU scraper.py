@@ -43,6 +43,7 @@ for title_element in title_elements:
         link.click()
         print('Clicking on {}'.format(title_element.text))
     # aspetta che la pagina di carichi fino a che non si carica l'elemento che voglio trovare 'verbatim reports'
+    # non riesco a trovare il selettore giusto - vedi nota sotto ***
         wait = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]'))
         )
@@ -59,6 +60,10 @@ for title_element in title_elements:
 time.sleep(600)
 
 
+
+# *** Il CSS_SELECTOR dovrebbe essere td.switch_button_pv_cre ma mi dice che non lo trova. Ho provato anche con l'XPATH ma non funziona nemmeno quello
+# (cosa che ha pure senso considerando che credo cambi di pagina in pagina). Ho anche provato con il By.LINK_TEXT ma nulla. 
+# stong scienn pazzzz 
 
 '''    # Scroll the element into view
     driver.execute_script("arguments[0].scrollIntoView();", link)
