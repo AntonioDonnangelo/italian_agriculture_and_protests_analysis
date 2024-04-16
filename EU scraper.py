@@ -47,12 +47,12 @@ for title_element in title_elements:
         print('Clicking on {}'.format(title_element.text))
     # aspetta che la pagina di carichi fino a che non si carica l'elemento che voglio trovare 'verbatim reports'
     # non riesco a trovare il selettore giusto - vedi nota sotto ***
+        driver.switch_to.window(driver.window_handles[i+1])
         wait = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]'))
         )
     # trova l'elemento 'verbatim reports e clicca'
-        time.sleep(5)
-        driver.switch_to.window(driver.window_handles[i+1])
+        time.sleep(5)       
         link2 = driver.find_element(By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]')
         print('Element was successfully found. Clicking on it...')
         link2.click()
