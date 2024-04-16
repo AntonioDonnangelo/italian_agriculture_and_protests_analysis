@@ -18,6 +18,7 @@ options.add_experimental_option("useAutomationExtension", False)
 driver = webdriver.Chrome(options=options)
 # apro la pagina
 driver.get(target_url)
+time.sleep(5)
 
 # gestione pop-up cookies 
 
@@ -36,9 +37,11 @@ enter_button.click()
 title_elements = driver.find_elements(By.CLASS_NAME, "title")
 
 # itero su tittgli gli elementi
+i = 0
 for title_element in title_elements:
     # prova: trova il link per andare sulla pagina e clicca
     try:
+        driver.switch_to.window( driver.window_handles[0])
         link = title_element.find_element(By.TAG_NAME, "a")
         link.click()
         print('Clicking on {}'.format(title_element.text))
@@ -48,6 +51,8 @@ for title_element in title_elements:
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]'))
         )
     # trova l'elemento 'verbatim reports e clicca'
+        time.sleep(5)
+        driver.switch_to.window(driver.window_handles[i+1])
         link2 = driver.find_element(By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]')
         print('Element was successfully found. Clicking on it...')
         link2.click()
@@ -56,6 +61,7 @@ for title_element in title_elements:
 
         print("Error:", str(e))
 
+    i = i + 1
 
 time.sleep(600)
 
