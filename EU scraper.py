@@ -118,31 +118,35 @@ enter_button = driver.find_element(By.ID, 'sidesButtonSubmit')
 enter_button.click()
 
 # identifico i risultati della query
+
+
 title_elements = driver.find_elements(By.CLASS_NAME, "title a")
 
 results = [(title_element.text, title_element.get_attribute('href')) for title_element in title_elements]
 
 print('Accessing the for loop')
 
-
-# itero su tittgli gli elementi
+i = 0
+# itero su tutti gli gli elementi
 for report, report_url in results:
-        # prova: trova il link per andare sulla pagina e clicca
+            # prova: trova il link per andare sulla pagina e clicca
     try:
         driver.get(report_url)
         print('Fetching report:', report)
-        # aspetta che la pagina di carichi fino a che non si carica l'elemento che voglio trovare 'verbatim reports'
-        # non riesco a trovare il selettore giusto - vedi nota sotto ***
+            # aspetta che la pagina di carichi fino a che non si carica l'elemento che voglio trovare 'verbatim reports'
+            # non riesco a trovare il selettore giusto - vedi nota sotto ***
         wait = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]'))
-            )
-        # trova l'elemento 'verbatim reports e clicca'
-        link2 = driver.find_element(By.CSS_SELECTOR, 'td.switch_button_pv_cre a[href]')
+                )
+            # trova l'elemento 'verbatim reports e clicca'
+        new_page = driver.find_element(By.CSS_SELECTOR, 'td.switch_button_pv_cre a')
+
         print('Element was successfully found. Clicking on it...')
-        link2.click()
-        fetch_xml = driver.find_element(By.CSS_SELECTOR, 'tr td a[href]')
-        print('xml located')
-        xml_url = fetch_xml.get_attribute('href')
+
+        xml_url = new_page.get_attribute('href')
+
+        print('XML file located')
+
         xml_content = requests.get(xml_url).text
 
         filename = f"{report}.xml"  # You can customize the filename here
@@ -150,11 +154,11 @@ for report, report_url in results:
             file.write(xml_content)
             print(f"XML document '{filename}' downloaded successfully.")
 
-        # except: se non  trovi l'elemento, dimmi quale è il problema e continua
+            # except: se non  trovi l'elemento, dimmi quale è il problema e continua
     except Exception as e:
 
-            print("Error:", str(e))
+        print("Error:", str(e))
 
-
+    i += 1
 
 driver.quit()
