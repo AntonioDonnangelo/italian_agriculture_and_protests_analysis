@@ -13,6 +13,7 @@ from random import uniform
 from bs4 import BeautifulSoup
 import csv
 import comments_module
+import os
 
 # opzioni che servono a mascherare il fatto che il browser non è guidato da un umano
 options = webdriver.ChromeOptions()
@@ -35,9 +36,6 @@ options.add_argument("--start-maximized")
 
 # instanzio il driver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-post_id_list = []
-y = 500
 
 # apro l'url
 url = "https://www.facebook.com/p/CRA-Agricoltori-traditi-100075537623150/"
@@ -76,14 +74,28 @@ wait = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_
 time.sleep(uniform(4, 6))
 original_window = driver.current_window_handle
 
+# inserisco i post_id già visitati in post_id_list
+try:
+     with open("Facebook\csv_docs\posts.csv", 'r') as file:
+        reader = csv.DictReader(file)
+        post_id_list = [row["post_id"] for row in reader]
+except:
+    post_id_list = []
+initial_length = len(post_id_list)
+y = 500 # costante per lo scorrimento della pagina
+at_least_new_posts = 10 # quanti nuovi post voglio (sarà un numero >= 10)
+
 # metto i commenti in un csv
 output_file = "Facebook\csv_docs\posts.csv"
 with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     csv_writer = csv.writer(handle_w, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
-    headers = ["post_id", "url", "date", "time_of_fetching", "header", "content", "image", "video", "likes"]
-    csv_writer.writerow(headers)
+    # se il file è vuoto lungo la prima riga metto l'header
+    file_size = os.path.getsize('Facebook\csv_docs\posts.csv')  # Find the size of csv file
+    if file_size == 0:     # if size is empty 
+        headers = ["post_id", "url", "date", "time_of_fetching", "header", "content", "image", "video", "likes"]
+        csv_writer.writerow(headers)
 
-    i = 0
+    # estraggo i dati dai post
     while True:
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -137,13 +149,11 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             # apro il link della data per estrarre i commenti
             try: 
                 comments_module.get_comments(driver=driver, url=url, post_id=post_id)
-                time.sleep(uniform(1, 3))
             except:
                 pass
         driver.close()
         driver.switch_to.window(original_window)
-        i = i + 1
-        if i == 2:
+        if (len(post_id_list) - initial_length) >= at_least_new_posts:
             break
         for i_scroll in range(0, 10):
             driver.execute_script("window.scrollTo(0, "+ str(y) +")")
