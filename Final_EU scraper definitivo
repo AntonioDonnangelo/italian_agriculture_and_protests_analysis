@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import requests
+import xml.dom.minidom
 
 target_url = 'https://www.europarl.europa.eu/plenary/en/minutes.html'
 query = 'green deal' #done
@@ -74,7 +75,7 @@ print('Accessing the for loop')
 
 
 for report, report_url in results:
-            # prova: trova il link per andare sulla pagina e clicca
+    # prova: trova il link per andare sulla pagina e clicca
     try:
         driver.get(report_url)
         print('Fetching report:', report)
@@ -89,19 +90,37 @@ for report, report_url in results:
 
         print('Element was successfully found. Clicking on it...')
 
-        xml_url = new_page.get_attribute('href')
+        report_url = new_page.get_attribute('href')
+
+        driver.get(report_url)
+
+        wait2 = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.XPATH, '/html/body/table/tbody/tr[2]/td/table[2]/tbody/tr[1]/td[2]/table/tbody/tr/td/a'))
+        )
+
+        xml_url = driver.find_element(By.XPATH, '/html/body/table/tbody/tr[2]/td/table[2]/tbody/tr[1]/td[2]/table/tbody/tr/td/a')
 
         print('XML located')
 
-        xml_content = requests.get(xml_url).text
+        xml_content = xml_url.get_attribute('href')
 
-        filename = f"{report}.xml"  # You can customize the filename here
+        driver.get(xml_content)
+
+        print('XML accessed')
+
+        xml_file = requests.get(xml_content).text
+
+        filename = f"{report}.xml"  # nome del file automatizzato
 
         with open(filename, "w", encoding="utf-8") as file:
-            file.write(xml_content)
+            dom = xml.dom.minidom.parseString(xml_file)
+            # Pretty print l'XML con intendazione
+            pretty_xml = dom.toprettyxml(indent="    ")
+            # scriviamo il file pretty print
+            file.write(pretty_xml)
             print(f"XML document '{filename}' downloaded successfully.")
 
-                    # except: se non  trovi l'elemento, dimmi quale è il problema e continua
+    # except: se non  trovi l'elemento, dimmi quale è il problema e continua
     except Exception as e:
 
         print("Error:", str(e))
