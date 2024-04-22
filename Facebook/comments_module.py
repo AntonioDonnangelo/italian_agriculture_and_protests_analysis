@@ -18,18 +18,18 @@ def get_comments(driver, url, post_id):
     # aspetto di essere dentro
     CSS_SELECTOR = '.' + '.'.join("x1i10hfl x1qjc9v5 xjbqb8w xjqpnuy xa49m3k xqeqjp1 x2hbi6w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1q0g3np x87ps6o x1lku1pv x1rg5ohu x1a2a7pz x1hc1fzr x1k90msu x6o7n8i xbxq160".split())
     wait = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, CSS_SELECTOR)))
-    time.sleep(uniform(4, 6))
+    time.sleep(uniform(1, 2))
 
     # faccio lo switch a all comments e clicco all comments
     CSS_SELECTOR = '.' + '.'.join("x6s0dn4 x78zum5 xdj266r x11i5rnm xat24cr x1mh8g0r xe0p6wg".split()) + " > div"
     button = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, CSS_SELECTOR)))
     wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
     button.click()
-    time.sleep(uniform(1, 3))
+    time.sleep(uniform(1, 2))
     CSS_SELECTOR = '.' + '.'.join("x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xk50ysn xzsf02u x1yc453h".split())
     all_comments = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, CSS_SELECTOR)))[2]
     all_comments.click()
-    time.sleep(uniform(1, 3))
+    time.sleep(uniform(1, 2))
 
     # seleziono gli elementi view reply and more comments
     # view more replies
