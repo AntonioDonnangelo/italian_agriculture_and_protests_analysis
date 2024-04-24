@@ -1,0 +1,90 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import csv
+import time
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+import requests
+import xml.dom.minidom
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+driver = webdriver.Chrome(options=options)
+
+#target_url = 'https://www.frosinonetoday.it/'
+target_url='https://www.bolognatoday.it/'
+driver.get(target_url)
+
+query = 'proteste trattori agricoltori'
+
+wait = WebDriverWait(driver, 30).until(EC.presence_of_element_located((
+    By.XPATH, '//*[@id="iubenda-cs-banner"]/div/div/div/div[3]/div[2]/button')))
+print('Cookie element located')
+cookie_button = driver.find_element(By.XPATH, '//*[@id="iubenda-cs-banner"]/div/div/div/div[3]/div[2]/button')
+time.sleep(5)
+cookie_button.click()
+print('Cookies accepted')
+
+search_element = driver.find_element(By.XPATH, '//*[@id="c-header"]/div[1]/div[1]/div[3]/div[2]')
+
+search_element.click()
+print('Search bar opened')
+search_bar = driver.find_element(By.XPATH, '//*[@id="c-header"]/div[2]/div/form/input')
+search_bar.send_keys(query)
+print('Query sent')
+enter_button = driver.find_element(By.XPATH, '//*[@id="c-header"]/div[2]/div/form/button')
+time.sleep(5)
+enter_button.click()
+print('Button clicked')
+
+driver.switch_to.window(driver.window_handles[0])
+time.sleep(10)
+
+result_list = driver.find_elements(By.CSS_SELECTOR, '.c-story__header a.o-link-text[href]')
+
+#print(result_list)
+
+results = []
+
+for article in result_list:
+    results += [(element.text, element.get_attribute('href')) for element in result_list]
+
+#print('Here are the results:', results)
+
+for result, result_url in results:
+    try:
+        driver.get(result_url)
+        print('Fetching report:', result)
+
+        wait = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, 'data-content--body')))
+
+        print('Element found')
+        titolo = driver.find_element(By.CLASS_NAME, 'l-entry__title u-heading-01 u-mb-small')
+        print('Element found')
+        sottotitolo = driver.find_element(By.CLASS_NAME, 'l-entry__summary u-body-03 u-color-secondary u-mb-small')
+        print('Element found')
+        testo = driver.find_elements(By.CLASS_NAME, 'c-entry')
+        print('Element found')
+        #autore = driver.find_elements(By.CLASS_NAME, )
+
+
+        with open(result + '.csv', "w", encoding="utf-8") as handle:
+            file_writer = csv.writer(handle, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+            file_writer.writerow(["Titolo", "Sottotitolo", "Testo"])
+            file_writer.writerow([titolo.text, sottotitolo.text, testo.text])
+
+
+    except Exception as e:
+        print("Error:", str(e))
+
+
+time.sleep(30)
+
+
+
+driver.quit()
