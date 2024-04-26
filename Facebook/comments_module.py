@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import csv
 import os
 
-def get_comments(driver, url, post_id):
+def get_comments(driver, url, post_date, post_date_count):
 
     # apro l'url
     driver.get(url)
@@ -77,7 +77,7 @@ def get_comments(driver, url, post_id):
         # se il file è vuoto lungo la prima riga metto l'header
         file_size = os.path.getsize('Facebook\csv_docs\comments.csv')  # Find the size of csv file
         if file_size == 0:     # if size is empty 
-            headers = ["comment_id", "post_id", "author", "content", "likes", "date", "time_of_fetching", "level", "type"]
+            headers = ["comment_id", "post_date", "post_date_count", "comment_date", "author", "content", "likes", "level", "type", "time_of_fetching"]
             csv_writer.writerow(headers)
 
         # estraggo i dati dai commenti
@@ -98,9 +98,9 @@ def get_comments(driver, url, post_id):
             # estraggo la data
             try:
                 CSS_SELECTOR = "html-span xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1hl2dhg x16tdsg8 x1vvkbs"
-                date = comment.find("span", {"class": CSS_SELECTOR}).get_text()
+                comment_date = comment.find("span", {"class": CSS_SELECTOR}).get_text()
             except:
-                date = None
+                comment_date = None
             # estraggo il numero di like al commento
             try:
                 CSS_SELECTOR = "x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz"
@@ -141,7 +141,7 @@ def get_comments(driver, url, post_id):
             except:
                 type = None
             # scrivo su csv la riga corrispondente al commento corrente
-            csv_writer.writerow([i, post_id, author, content, likes, date, datetime.now(), level, type])
+            csv_writer.writerow([i, post_date, post_date_count, comment_date, author, content, likes, level, type, datetime.now()])
             i = i + 1
 
     

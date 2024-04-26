@@ -74,16 +74,16 @@ wait = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_
 time.sleep(uniform(4, 6))
 original_window = driver.current_window_handle
 
-# inserisco i post_id già visitati in post_id_list
+# inserisco i (date, date_count) già visitati in date_list
 try:
-     with open("Facebook\csv_docs\posts.csv", 'r') as file:
+     with open("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv", 'r', encoding="utf-8") as file:
         reader = csv.DictReader(file)
-        post_id_list = [row["post_id"] for row in reader]
+        date_list = [(row["date"], int(row["date_count"])) for row in reader]
 except:
-    post_id_list = []
-initial_length = len(post_id_list)
-y = 500 # costante per lo scorrimento della pagina
-at_least_new_posts = 10 # quanti nuovi post voglio (sarà un numero >= 10)
+    date_list = []
+initial_length = len(date_list)
+y = 500 # costante iniziale per lo scorrimento della pagina
+number_new_posts = 2 # quanti nuovi post voglio 
 
 # metto i commenti in un csv
 output_file = "Facebook\csv_docs\posts.csv"
@@ -92,33 +92,42 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     # se il file è vuoto lungo la prima riga metto l'header
     file_size = os.path.getsize('Facebook\csv_docs\posts.csv')  # Find the size of csv file
     if file_size == 0:     # if size is empty 
-        headers = ["post_id", "url", "date", "time_of_fetching", "header", "content", "image", "video", "likes"]
+        headers = ["url", "date", "date_count", "time_of_fetching", "header", "content", "image", "video", "likes"]
         csv_writer.writerow(headers)
 
     # estraggo i dati dai post
+    previous_date = None
+    if len(date_list) == 0:
+        date_count = 1
+    else:
+        date_count = date_list[-1][1]
     while True:
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         all_posts = soup.find_all("div", {"class": "x1yztbdb x1n2onr6 xh8yej3 x1ja2u2z"})
-        driver.switch_to.new_window('tab')
+        driver.switch_to.new_window('tab')        
         for post in all_posts:
-            # estraggo il post id, url 
-            try:
-                date_element = post.find("a", {"class": "x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1heor9g xt0b8zv xo1l8bm"})
-                url = date_element["href"]
-                post_id = url[url.find('?story_fbid=') + 12 : url.find('&id=')]
-                if post_id in post_id_list:
-                    continue
-            except:
-                post_id = None
-                url = None
-            post_id_list.append(post_id)
             # estraggo la data
             try:
                 date_element = post.find("a", {"class": "x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1heor9g xt0b8zv xo1l8bm"})
                 date = date_element["aria-label"]
             except:
                 date = None
+            if date == previous_date:
+                date_count = date_count + 1
+            else:
+                date_count = 1
+            previous_date = date
+            if (date, date_count) in date_list:
+                continue
+            if date is not None and len(date.strip()) <= 3:
+                continue
+            # estraggo l'url 
+            try:
+                date_element = post.find("a", {"class": "x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1heor9g xt0b8zv xo1l8bm"})
+                url = date_element["href"]
+            except:
+                url = None
             # estraggo il numero di like
             try:
                 likes = post.find("span", {"class": "xt0b8zv x2bj2ny xrbpyxo xl423tq"}).text
@@ -145,19 +154,28 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             except:
                 video = None
             # scrivo su csv i dati che ho raccolto
-            csv_writer.writerow([post_id, url, date, datetime.now(), header, content, image, video, likes])
+            check_list = [url, date, header, content, image, video, likes]
+            if any(element is not None and element != '' for element in check_list):
+                date_list.append((date, date_count))
+                csv_writer.writerow([url, date, date_count, datetime.now(), header, content, image, video, likes])
+                print(date.split())
             # apro il link della data per estrarre i commenti
             try: 
-                comments_module.get_comments(driver=driver, url=url, post_id=post_id)
+                comments_module.get_comments(driver=driver, url=url, post_date=date, post_date_count=date_count)
             except:
                 pass
+            if (len(date_list) - initial_length) >= number_new_posts:
+                break
         driver.close()
         driver.switch_to.window(original_window)
-        if (len(post_id_list) - initial_length) >= at_least_new_posts:
+        #print(len(date_list) - initial_length)    
+        if (len(date_list) - initial_length) >= number_new_posts:
             break
         for i_scroll in range(0, 10):
             driver.execute_script("window.scrollTo(0, "+ str(y) +")")
-            y = y + 500
+            y = y + uniform(400, 600)
             time.sleep(uniform(0, 1))
         time.sleep(uniform(4, 6))
+
+       
        
