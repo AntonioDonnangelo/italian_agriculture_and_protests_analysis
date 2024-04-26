@@ -71,11 +71,11 @@ def get_comments(driver, url, post_date, post_date_count):
     all_comments = soup.find_all("div", {"class": "x1r8uery x1iyjqo2 x6ikm8r x10wlt62 x1pi30zi"})
     
     # metto i commenti in un csv
-    output_file = "Facebook\csv_docs\comments.csv"
+    output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments.csv"
     with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
         csv_writer = csv.writer(handle_w, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
         # se il file è vuoto lungo la prima riga metto l'header
-        file_size = os.path.getsize('Facebook\csv_docs\comments.csv')  # Find the size of csv file
+        file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments.csv")  # Find the size of csv file
         if file_size == 0:     # if size is empty 
             headers = ["comment_id", "post_date", "post_date_count", "comment_date", "author", "content", "likes", "level", "type", "time_of_fetching"]
             csv_writer.writerow(headers)

@@ -40,6 +40,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 # apro l'url
 url = "https://www.facebook.com/p/CRA-Agricoltori-traditi-100075537623150/"
+# url = "https://www.facebook.com/TaylorSwift"
 driver.get(url)
 time.sleep(uniform(1, 2))
 
@@ -94,14 +95,14 @@ except:
     date_list = []
 initial_length = len(date_list)
 y = 500 # costante iniziale per lo scorrimento della pagina
-number_new_posts = 2 # quanti nuovi post voglio 
+number_new_posts = 10 # quanti nuovi post voglio 
 
 # metto i commenti in un csv
-output_file = "Facebook\csv_docs\posts.csv"
+output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv"
 with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     csv_writer = csv.writer(handle_w, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     # se il file è vuoto lungo la prima riga metto l'header
-    file_size = os.path.getsize('Facebook\csv_docs\posts.csv')  # Find the size of csv file
+    file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv")  # Find the size of csv file
     if file_size == 0:     # if size is empty 
         headers = ["url", "post_date", "date_count", "time_of_fetching", "header", "content", "image", "video", "likes"]
         csv_writer.writerow(headers)
