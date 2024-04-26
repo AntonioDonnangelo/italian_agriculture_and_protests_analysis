@@ -7,13 +7,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from datetime import datetime
+from datetime import datetime, date
 import time
 from random import uniform
 from bs4 import BeautifulSoup
 import csv
 import comments_module
 import os
+import fbdate_to_date
 
 # opzioni che servono a mascherare il fatto che il browser non è guidato da un umano
 options = webdriver.ChromeOptions()
@@ -74,11 +75,21 @@ wait = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_
 time.sleep(uniform(4, 6))
 original_window = driver.current_window_handle
 
-# inserisco i (date, date_count) già visitati in date_list
+# inserisco i (post_date, date_count) già visitati in date_list
 try:
      with open("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv", 'r', encoding="utf-8") as file:
         reader = csv.DictReader(file)
-        date_list = [(row["date"], int(row["date_count"])) for row in reader]
+        date_list = []
+        for row in reader:
+            try:
+                temp_date = date.fromisoformat(row["post_date"])
+            except:
+                temp_date = row["post_date"]
+            try:
+                temp_date_count = int(row["date_count"])
+            except:
+                temp_date_count = row["date_count"]
+            date_list.append((temp_date, temp_date_count))
 except:
     date_list = []
 initial_length = len(date_list)
@@ -92,11 +103,14 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     # se il file è vuoto lungo la prima riga metto l'header
     file_size = os.path.getsize('Facebook\csv_docs\posts.csv')  # Find the size of csv file
     if file_size == 0:     # if size is empty 
-        headers = ["url", "date", "date_count", "time_of_fetching", "header", "content", "image", "video", "likes"]
+        headers = ["url", "post_date", "date_count", "time_of_fetching", "header", "content", "image", "video", "likes"]
         csv_writer.writerow(headers)
 
     # estraggo i dati dai post
-    previous_date = None
+    if len(date_list) == 0:
+        previous_date = None
+    else:
+        previous_date = date_list[-1][0]
     if len(date_list) == 0:
         date_count = 1
     else:
@@ -110,17 +124,26 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             # estraggo la data
             try:
                 date_element = post.find("a", {"class": "x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1heor9g xt0b8zv xo1l8bm"})
-                date = date_element["aria-label"]
+                post_date = date_element["aria-label"].strip()
             except:
-                date = None
-            if date == previous_date:
+                post_date = None
+            # se il post è dell'ultima settimana salto l'iterazione
+            if post_date is not None and len(post_date) <= 3:
+                continue
+            # trasformo la data in un oggetto di tipo date yyyy-mm-dd
+            try:
+                if post_date is not None and post_date != '':
+                    post_date = fbdate_to_date.string_to_date(post_date)
+            except:
+                pass
+            # aggiorno date count
+            if post_date == previous_date:
                 date_count = date_count + 1
             else:
                 date_count = 1
-            previous_date = date
-            if (date, date_count) in date_list:
-                continue
-            if date is not None and len(date.strip()) <= 3:
+            previous_date = post_date
+            # se ho già visto il post salto l'iterazione
+            if (post_date, date_count) in date_list:
                 continue
             # estraggo l'url 
             try:
@@ -154,14 +177,13 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             except:
                 video = None
             # scrivo su csv i dati che ho raccolto
-            check_list = [url, date, header, content, image, video, likes]
+            check_list = [url, post_date, header, content, image, video, likes]
             if any(element is not None and element != '' for element in check_list):
-                date_list.append((date, date_count))
-                csv_writer.writerow([url, date, date_count, datetime.now(), header, content, image, video, likes])
-                print(date.split())
+                date_list.append((post_date, date_count))
+                csv_writer.writerow([url, post_date, date_count, datetime.now(), header, content, image, video, likes])
             # apro il link della data per estrarre i commenti
             try: 
-                comments_module.get_comments(driver=driver, url=url, post_date=date, post_date_count=date_count)
+                comments_module.get_comments(driver=driver, url=url, post_date=post_date, post_date_count=date_count)
             except:
                 pass
             if (len(date_list) - initial_length) >= number_new_posts:
