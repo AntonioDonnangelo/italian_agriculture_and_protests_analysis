@@ -52,9 +52,16 @@ actions.click(cookie_button)
 actions.perform()
 time.sleep(uniform(1, 2))
 
+# leggo da file email e password per facebook
+with open("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\credentials.txt", 'r', encoding="utf-8") as file:
+    line1 = file.readline()
+    line1 = line1[0:-1]
+    fb_password = line1.split()[2]
+    line2 = file.readline()
+    line2 = line2[0:]
+    fb_email = line2.split()[2]
+
 # inserisco email e password
-fb_password = 'diegoegianlucavsfb200'
-fb_email = 'gianluca.pisa.rainbow@gmail.com'
 credentials = driver.find_elements(By.CSS_SELECTOR, '.x1i10hfl.xggy1nq.x1s07b3s.x1kdt53j.x1a2a7pz.xjbqb8w.x1ejq31n.xd10rxx.x1sy0etr.x17r0tee.x9f619.xzsf02u.x1uxerd5.x1fcty0u.x132q4wb.x1a8lsjc.x1pi30zi.x1swvt13.x9desvi.xh8yej3.x15h3p50.x10emqs4')
 email_field = credentials[0]
 psw_field = credentials[1]
