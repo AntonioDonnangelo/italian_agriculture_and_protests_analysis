@@ -102,7 +102,7 @@ except:
     date_list = []
 initial_length = len(date_list)
 y = 500 # costante iniziale per lo scorrimento della pagina
-number_new_posts = 10 # quanti nuovi post voglio 
+number_new_posts = 50 # quanti nuovi post voglio 
 
 # metto i commenti in un csv
 output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv"
