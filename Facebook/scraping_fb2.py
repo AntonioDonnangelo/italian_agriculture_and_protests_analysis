@@ -13,6 +13,7 @@ from random import uniform
 from bs4 import BeautifulSoup
 import csv
 import comments_module
+import live_comments_module
 import os
 import fbdate_to_date
 
@@ -123,6 +124,7 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
         date_count = 1
     else:
         date_count = date_list[-1][1]
+    live = 0
     while True:
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -142,6 +144,8 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             try:
                 if post_date is not None and post_date != '':
                     post_date = fbdate_to_date.string_to_date(post_date)
+                    if post_date >= fbdate_to_date.string_to_date("April 18 at 8:02 AM"):
+                        continue
             except:
                 pass
             # aggiorno date count
@@ -190,8 +194,18 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
                 date_list.append((post_date, date_count))
                 csv_writer.writerow([url, post_date, date_count, datetime.now(), header, content, image, video, likes])
             # apro il link della data per estrarre i commenti
-            try: 
-                comments_module.get_comments(driver=driver, url=url, post_date=post_date, post_date_count=date_count)
+            try:
+                try:
+                    title = post.find("span", {"class": "x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xi81zsa x1yc453h"}).text
+                    if "live" in title:
+                        live = 1
+                except:
+                    pass
+                if live == 1:
+                    live_comments_module.get_comments(driver=driver, url=url, post_date=post_date, post_date_count=date_count)
+                else:
+                    comments_module.get_comments(driver=driver, url=url, post_date=post_date, post_date_count=date_count)
+                live = 0
             except:
                 pass
             if (len(date_list) - initial_length) >= number_new_posts:
@@ -203,7 +217,7 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             break
         for i_scroll in range(0, 10):
             driver.execute_script("window.scrollTo(0, "+ str(y) +")")
-            y = y + uniform(400, 600)
+            y = y + uniform(800, 1200)
             time.sleep(uniform(0, 1))
         time.sleep(uniform(4, 6))
 
