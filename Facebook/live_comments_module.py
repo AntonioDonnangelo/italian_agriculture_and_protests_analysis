@@ -57,12 +57,23 @@ def get_comments(driver, url, post_date, post_date_count):
     replies_more = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
 
     def expand_everything(driver, buttons):
+        #CSS_SELECTOR = "x1jx94hy x78zum5 xdt5ytf x1iyjqo2 x1ja2u2z x6ikm8r x10wlt62"
+        #comment_section = WebDriverWait(driver, 20).until(EC.presence_of_element_located(By.CSS_SELECTOR, CSS_SELECTOR))
         count = 0
         for button in buttons:
             wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
-            button.click()
+            try:
+                if "See less" in button.text:
+                    continue
+            except:
+                pass
+            try:
+                button.click()
+            except:
+                break
             time.sleep(uniform(2, 3))
             count = count + 1
+            #comment_section = WebDriverWait(driver, 20).until(EC.presence_of_element_located(By.CSS_SELECTOR, CSS_SELECTOR))
             new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
             # se non trova più niente per sicurezza rieseguo
             if(len(new_buttons)) == 0:

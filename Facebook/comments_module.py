@@ -48,23 +48,71 @@ def get_comments(driver, url, post_date, post_date_count):
     CSS_SELECTOR_3 = '.' + '.'.join("x1i10hfl xjbqb8w xjqpnuy xa49m3k xqeqjp1 x2hbi6w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xdl72j9 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli xexx8yu x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1a2a7pz x6s0dn4 xi81zsa x1iyjqo2 xs83m0k xsyo7zv xt0b8zv".split())
     replies_more = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
 
-    def expand_everything(driver, buttons):
-        count = 0
-        for button in buttons:
-            wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
-            button.click()
-            time.sleep(uniform(2, 3))
-            count = count + 1
-            new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
-            # se non trova più niente per sicurezza rieseguo
-            if(len(new_buttons)) == 0:
-                time.sleep(uniform(2, 3))
-                new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
-            if len(new_buttons) > len(buttons) - count:
-                expand_everything(driver, new_buttons)
-                break
+    # verifico se è un video o un post normale
+    video_flag = 0
+    CSS_SELECTOR = '.' + '.'.join("x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x14z4hjw x3x7a5m xngnso2 x1qb5hxa x1xlr1w8 xzsf02u".split())
+    if driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR):
+        video_flag = 1
 
-    expand_everything(driver, replies_more)
+    if video_flag == 1:
+        def expand_everything(driver, buttons):
+            count = 0
+            for button in buttons:
+                wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
+                try:
+                    if "See less" in button.text:
+                        continue
+                except:
+                    pass
+                try:
+                    button.click()
+                except:
+                    break
+                time.sleep(uniform(2, 3))
+                count = count + 1
+                try:
+                    if driver.execute_script("return window.pageYOffset;") > 0:
+                        driver.execute_script("window.scrollTo(0, 0);")
+                        time.sleep(uniform(2, 3))
+                except:
+                    pass
+                new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
+                # se non trova più niente per sicurezza rieseguo
+                if(len(new_buttons)) == 0:
+                    time.sleep(uniform(2, 3))
+                    new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
+                if len(new_buttons) > len(buttons) - count:
+                    expand_everything(driver, new_buttons)
+                    break
+
+        expand_everything(driver, replies_more)
+
+    else:
+        def expand_everything(driver, buttons):
+            count = 0
+            for button in buttons:
+                wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
+                try:
+                    if "See less" in button.text:
+                        continue
+                except:
+                    pass
+                try:
+                    button.click()
+                except:
+                    break
+                time.sleep(uniform(2, 3))
+                count = count + 1
+                new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
+                # se non trova più niente per sicurezza rieseguo
+                if(len(new_buttons)) == 0:
+                    time.sleep(uniform(2, 3))
+                    new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
+                if len(new_buttons) > len(buttons) - count:
+                    expand_everything(driver, new_buttons)
+                    break
+
+        expand_everything(driver, replies_more)
 
     # adesso raccolgo tutti i commenti
     soup = BeautifulSoup(driver.page_source, "html.parser")
