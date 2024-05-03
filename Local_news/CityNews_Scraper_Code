@@ -19,7 +19,7 @@ driver = webdriver.Chrome(options=options)
 target_url='https://www.bolognatoday.it/'
 driver.get(target_url)
 
-query = 'proteste trattori agricoltori'
+query = 'proteste agricoltori'
 
 wait = WebDriverWait(driver, 30).until(EC.presence_of_element_located((
     By.XPATH, '//*[@id="iubenda-cs-banner"]/div/div/div/div[3]/div[2]/button')))
@@ -51,7 +51,7 @@ result_list = driver.find_elements(By.CSS_SELECTOR, '.c-story__header a.o-link-t
 results = []
 
 for article in result_list:
-    results += [(element.text, element.get_attribute('href')) for element in result_list]
+    results.append((article.text, article.get_attribute('href')))
 
 #print('Here are the results:', results)
 
@@ -60,23 +60,32 @@ for result, result_url in results:
         driver.get(result_url)
         print('Fetching report:', result)
 
-        wait = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.CLASS_NAME, 'data-content--body')))
+        wait = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, 'l-entry__title')))
+        time.sleep(10)
 
         print('Element found')
-        titolo = driver.find_element(By.CLASS_NAME, 'l-entry__title u-heading-01 u-mb-small')
-        print('Element found')
-        sottotitolo = driver.find_element(By.CLASS_NAME, 'l-entry__summary u-body-03 u-color-secondary u-mb-small')
-        print('Element found')
-        testo = driver.find_elements(By.CLASS_NAME, 'c-entry')
-        print('Element found')
-        #autore = driver.find_elements(By.CLASS_NAME, )
+
+        journalist = driver.find_element(By.CSS_SELECTOR, 'span.u-label-05.u-mb-xxsmall.u-block')
+        print('Jounalist\'s name found')
+        edition = driver.find_element(By.CSS_SELECTOR, '[data-edition]')
+        print('Edition found')
+        date = driver.find_element(By.CSS_SELECTOR, 'span.u-label-08[data-timestamp]')
+        print('Date found')
+        title = driver.find_element(By.CLASS_NAME, 'l-entry__title')
+        print('Title found')
+        subtitle = driver.find_element(By.CLASS_NAME, 'l-entry__summary')
+        print('Subtitle found')
+        paragraphs = driver.find_elements(By.CSS_SELECTOR, 'div.c-entry p')
+        p_texts = [p.text.strip() for p in paragraphs]
+        print('Text found')
 
 
         with open(result + '.csv', "w", encoding="utf-8") as handle:
             file_writer = csv.writer(handle, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
-            file_writer.writerow(["Titolo", "Sottotitolo", "Testo"])
-            file_writer.writerow([titolo.text, sottotitolo.text, testo.text])
+            file_writer.writerow(["Autore", "Data", "Edizione", "Titolo", "Sottotitolo", "Testo"])
+            file_writer.writerow([journalist.text, date.text, edition.get_attribute('data-edition'), title.text, subtitle.text, p_texts])
+            print('CSV created')
 
 
     except Exception as e:
@@ -85,6 +94,6 @@ for result, result_url in results:
 
 time.sleep(30)
 
-
-
 driver.quit()
+
+
