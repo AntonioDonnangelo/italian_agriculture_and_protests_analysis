@@ -4,3 +4,7 @@ Facebook/prova_find_html.py
 Facebook/credentials.txt
 Facebook/csv_docs/
 Facebook/add_column.py
+Facebook/video_comments_module.py
+Facebook/tests.ipynb
+Facebook/prova_commenti.py
+.vscode/
