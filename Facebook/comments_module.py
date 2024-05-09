@@ -60,7 +60,7 @@ def get_comments(driver, url, post_date, post_date_count):
             for button in buttons:
                 wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
                 try:
-                    if "See less" in button.text:
+                    if "See less" in button.text or "View previous replies" in button.text:
                         continue
                 except:
                     pass
@@ -68,7 +68,7 @@ def get_comments(driver, url, post_date, post_date_count):
                     button.click()
                 except:
                     break
-                time.sleep(uniform(2, 3))
+                time.sleep(uniform(3, 4))
                 count = count + 1
                 try:
                     if driver.execute_script("return window.pageYOffset;") > 0:
@@ -93,7 +93,7 @@ def get_comments(driver, url, post_date, post_date_count):
             for button in buttons:
                 wait = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(button))
                 try:
-                    if "See less" in button.text:
+                    if "See less" in button.text or "View previous replies" in button.text:
                         continue
                 except:
                     pass
@@ -101,7 +101,7 @@ def get_comments(driver, url, post_date, post_date_count):
                     button.click()
                 except:
                     break
-                time.sleep(uniform(2, 3))
+                time.sleep(uniform(3, 4))
                 count = count + 1
                 new_buttons = driver.find_elements(By.CSS_SELECTOR, CSS_SELECTOR_1 + "," + CSS_SELECTOR_2 + "," + CSS_SELECTOR_3)
                 # se non trova più niente per sicurezza rieseguo
@@ -119,11 +119,11 @@ def get_comments(driver, url, post_date, post_date_count):
     all_comments = soup.find_all("div", {"class": "x1r8uery x1iyjqo2 x6ikm8r x10wlt62 x1pi30zi"})
     
     # metto i commenti in un csv
-    output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments_with_author_url.csv"
+    output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments_with_author_url3.csv"
     with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
         csv_writer = csv.writer(handle_w, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
         # se il file è vuoto lungo la prima riga metto l'header
-        file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments_with_author_url.csv")  # Find the size of csv file
+        file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\comments_with_author_url3.csv")  # Find the size of csv file
         if file_size == 0:     # if size is empty 
             headers = ["comment_id", "post_date", "post_date_count", "comment_date", "author", "content", "likes", "level", "type", "time_of_fetching", "author_url"]
             csv_writer.writerow(headers)

@@ -135,7 +135,7 @@ time.sleep(uniform(4, 6))'''
 
 # inserisco i (post_date, date_count) già visitati in date_list
 try:
-     with open("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts2.csv", 'r', encoding="utf-8") as file:
+     with open("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts3.csv", 'r', encoding="utf-8") as file:
         reader = csv.DictReader(file)
         date_list = []
         for row in reader:
@@ -152,14 +152,14 @@ except:
     date_list = []
 initial_length = len(date_list)
 y = 500 # costante iniziale per lo scorrimento della pagina
-number_new_posts = 100 # quanti nuovi post voglio 
+number_new_posts = 300 # quanti nuovi post voglio 
 
 # metto i post in un csv
-output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts2.csv"
+output_file = "E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts3.csv"
 with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     csv_writer = csv.writer(handle_w, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     # se il file è vuoto lungo la prima riga metto l'header
-    file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts.csv")  # Find the size of csv file
+    file_size = os.path.getsize("E:\Gianluca\Master Big Data Pisa\Progetto_Finale\Agricolo\Facebook\csv_docs\posts3.csv")  # Find the size of csv file
     if file_size == 0:     # if size is empty 
         headers = ["url", "post_date", "date_count", "time_of_fetching", "header", "content", "image", "video", "likes", "num_comments", "num_shares"]
         csv_writer.writerow(headers)
@@ -180,11 +180,11 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
     count = 0
     while True:
         
-        '''try:
-            if previous_date < fbdate_to_date.string_to_date("February 1"):
+        try:
+            if previous_date <= fbdate_to_date.string_to_date("February 10"):
                 break
         except:
-            pass'''
+            pass
         soup = BeautifulSoup(driver.page_source, "html.parser")
         all_posts = soup.find_all("div", {"class": "x1yztbdb x1n2onr6 xh8yej3 x1ja2u2z"})
         driver.switch_to.new_window('tab')        
@@ -206,8 +206,8 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
             try:
                 if post_date is not None and post_date != '':
                     post_date = fbdate_to_date.string_to_date(post_date)
-                    if post_date >= fbdate_to_date.string_to_date("April 18 at 8:02 AM"):
-                        continue
+                    '''if post_date >= fbdate_to_date.string_to_date("April 18 at 8:02 AM"):
+                        continue'''
             except:
                 pass
             if count >= 1:
@@ -291,9 +291,11 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
                 else:
                     date_count = 1
                 date_list.append((post_date, date_count))
-                csv_writer.writerow([url, post_date, date_count, datetime.now(), header, content, image, video, likes, num_comments, num_shares])
                 previous_date = post_date
                 count = count + 1
+                if count <= 5:
+                    continue
+                csv_writer.writerow([url, post_date, date_count, datetime.now(), header, content, image, video, likes, num_comments, num_shares])
                 print(count)
             else:
                 continue
@@ -311,6 +313,7 @@ with open(output_file, 'a', encoding='utf-8', newline='') as handle_w:
                     else:
                         comments_module.get_comments(driver=driver, url=url, post_date=post_date, post_date_count=date_count)
                 except StaleElementReferenceException as ex:
+                    time.sleep(uniform(2, 3))
                     break_flag = 1
                     print(ex)
                     break
