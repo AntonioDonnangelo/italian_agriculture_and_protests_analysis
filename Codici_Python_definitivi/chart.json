@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "config": {
     "view": {
       "continuousHeight": 300,
@@ -16285,7 +16285,7 @@
       },
       "value": "Italia",
       "views": [
-        "view_12"
+        "view_1"
       ]
     },
     {
@@ -16310,7 +16310,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_12"
+        "view_1"
       ]
     }
   ],
@@ -16355,7 +16355,7 @@
             },
             "x": {
               "field": "TIME",
-              "title": "Time",
+              "title": "Year",
               "type": "nominal"
             },
             "y": {
@@ -16367,7 +16367,7 @@
           "mark": {
             "type": "line"
           },
-          "name": "view_12",
+          "name": "view_1",
           "transform": [
             {
               "filter": {
@@ -16423,7 +16423,7 @@
                 "labelBaseline": "top"
               },
               "field": "TIME",
-              "title": "Time",
+              "title": "Year",
               "type": "nominal"
             },
             "y": {
