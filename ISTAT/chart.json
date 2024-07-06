@@ -792,7 +792,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_2"
+        "view_1"
       ]
     }
   ],
@@ -818,7 +818,7 @@
           }
         }
       ],
-      "width": "container"
+      "width": 600
     },
     {
       "height": 400,
@@ -842,7 +842,7 @@
           "mark": {
             "type": "line"
           },
-          "name": "view_2",
+          "name": "view_1",
           "transform": [
             {
               "filter": {
@@ -912,7 +912,7 @@
           ]
         }
       ],
-      "width": "container"
+      "width": 600
     }
   ]
 }
