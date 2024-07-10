@@ -1,0 +1,918 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "data-17f6abee31db4d568e7f86e34262367d"
+  },
+  "datasets": {
+    "data-17f6abee31db4d568e7f86e34262367d": [
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1455787372.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1419869699.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1377085340.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1346450108.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1355508369.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1351529479.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1142768824.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1228512238.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1322871385.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1271544105.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1318554571.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1200748703.0
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1288116241.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1296323142.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1388759007.0
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1387845036.0
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1255949732.0
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Value": 1269885944.0
+      },
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1475891393.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1438757503.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1394624783.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1365348943.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1374175679.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1368206891.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1159719513.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1244776649.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1344248174.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1288922345.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1335869341.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1216191920.6
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1306011662.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1310940857.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1399782489.0
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1394870554.0
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1258490253.0
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Value": 1283821647.0
+      },
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8654962.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8928561.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8752703.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8778404.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 9144416.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8937698.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 6485930.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8868530.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8418471.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8424599.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8434477.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8316614.0
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8399401.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8489390.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8706583.0
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8784874.0
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8549126.0
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie in produzione - ettari",
+        "Title": "superficie in produzione - ettari - Italia",
+        "Value": 8612692.0
+      },
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3493808.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3158587.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3010293.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3815841.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3264381.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3710405.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3361199.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3699155.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3783197.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3827132.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3930843.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3899668.0
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3888707.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3940895.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 3946536.0
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 4546178.0
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 4277462.0
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - are",
+        "Title": "superficie totale - are - Italia",
+        "Value": 4564240.0
+      },
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13781322.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 14008038.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13937240.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13453082.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13806791.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13510804.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 11071021.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13443438.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12964554.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12823253.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12867047.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12679918.0
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12722362.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12753602.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 12857810.0
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13337066.0
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13193503.0
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "superficie totale - ettari",
+        "Title": "superficie totale - ettari - Italia",
+        "Value": 13072153.0
+      },
+      {
+        "TIME": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 13137147.0
+      },
+      {
+        "TIME": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12794224.0
+      },
+      {
+        "TIME": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12158885.0
+      },
+      {
+        "TIME": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12048741.0
+      },
+      {
+        "TIME": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12367569.0
+      },
+      {
+        "TIME": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12347332.0
+      },
+      {
+        "TIME": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 10023278.0
+      },
+      {
+        "TIME": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 11205810.0
+      },
+      {
+        "TIME": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12670459.0
+      },
+      {
+        "TIME": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 11770852.0
+      },
+      {
+        "TIME": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12366297.0
+      },
+      {
+        "TIME": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 11130009.0
+      },
+      {
+        "TIME": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12530982.0
+      },
+      {
+        "TIME": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12717932.0
+      },
+      {
+        "TIME": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 13239231.0223
+      },
+      {
+        "TIME": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12690878.5345
+      },
+      {
+        "TIME": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 11231536.9748
+      },
+      {
+        "TIME": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "unit\u00e0 foraggere",
+        "Title": "unit\u00e0 foraggere - Italia",
+        "Value": 12063232.6517
+      }
+    ]
+  },
+  "params": [
+    {
+      "bind": {
+        "input": "select",
+        "name": "Select Tipo dato ",
+        "options": [
+          "produzione raccolta - quintali",
+          "produzione totale - quintali",
+          "superficie in produzione - ettari",
+          "superficie totale - are",
+          "superficie totale - ettari",
+          "unit\u00e0 foraggere"
+        ]
+      },
+      "name": "SelectTipoDato",
+      "select": {
+        "fields": [
+          "Tipo dato"
+        ],
+        "type": "point"
+      },
+      "value": "produzione raccolta - quintali",
+      "views": [
+        "view_1"
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "encoding": {
+        "text": {
+          "field": "Title",
+          "type": "nominal"
+        }
+      },
+      "height": 30,
+      "mark": {
+        "align": "center",
+        "dy": -15,
+        "fontSize": 20,
+        "type": "text"
+      },
+      "transform": [
+        {
+          "filter": {
+            "param": "SelectTipoDato"
+          }
+        }
+      ],
+      "width": 600
+    },
+    {
+      "height": 400,
+      "layer": [
+        {
+          "encoding": {
+            "color": {
+              "value": "#5F9EA0"
+            },
+            "x": {
+              "field": "TIME",
+              "title": "Year",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Value",
+              "title": "Value",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "type": "line"
+          },
+          "name": "view_1",
+          "transform": [
+            {
+              "filter": {
+                "param": "SelectTipoDato"
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Value",
+              "scale": {
+                "range": [
+                  "#66c2a4",
+                  "#005824"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "Value",
+              "legend": null,
+              "scale": {
+                "range": [
+                  20,
+                  300
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "TIME",
+                "type": "nominal"
+              },
+              {
+                "field": "Value",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "axis": {
+                "labelAlign": "center",
+                "labelAngle": 0,
+                "labelBaseline": "top"
+              },
+              "field": "TIME",
+              "title": "Year",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Value",
+              "title": "Value",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "type": "circle"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "SelectTipoDato"
+              }
+            }
+          ]
+        }
+      ],
+      "width": 600
+    }
+  ]
+}

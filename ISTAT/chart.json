@@ -7,10 +7,10 @@
     }
   },
   "data": {
-    "name": "data-17f6abee31db4d568e7f86e34262367d"
+    "name": "data-197e1aaf386e880526d078e145960fbd"
   },
   "datasets": {
-    "data-17f6abee31db4d568e7f86e34262367d": [
+    "data-197e1aaf386e880526d078e145960fbd": [
       {
         "TIME": 2006,
         "Territorio": "Italia",
@@ -121,21 +121,21 @@
         "Territorio": "Italia",
         "Tipo dato": "produzione raccolta - quintali",
         "Title": "produzione raccolta - quintali - Italia",
-        "Value": 1387845036.0
+        "Value": 1377247009.0
       },
       {
         "TIME": 2022,
         "Territorio": "Italia",
         "Tipo dato": "produzione raccolta - quintali",
         "Title": "produzione raccolta - quintali - Italia",
-        "Value": 1255949732.0
+        "Value": 1244706899.0
       },
       {
         "TIME": 2023,
         "Territorio": "Italia",
         "Tipo dato": "produzione raccolta - quintali",
         "Title": "produzione raccolta - quintali - Italia",
-        "Value": 1269885944.0
+        "Value": 1258298345.0
       },
       {
         "TIME": 2006,
@@ -247,21 +247,21 @@
         "Territorio": "Italia",
         "Tipo dato": "produzione totale - quintali",
         "Title": "produzione totale - quintali - Italia",
-        "Value": 1394870554.0
+        "Value": 1384178354.0
       },
       {
         "TIME": 2022,
         "Territorio": "Italia",
         "Tipo dato": "produzione totale - quintali",
         "Title": "produzione totale - quintali - Italia",
-        "Value": 1258490253.0
+        "Value": 1247172780.0
       },
       {
         "TIME": 2023,
         "Territorio": "Italia",
         "Tipo dato": "produzione totale - quintali",
         "Title": "produzione totale - quintali - Italia",
-        "Value": 1283821647.0
+        "Value": 1272136502.0
       },
       {
         "TIME": 2006,
@@ -625,21 +625,21 @@
         "Territorio": "Italia",
         "Tipo dato": "superficie totale - ettari",
         "Title": "superficie totale - ettari - Italia",
-        "Value": 13337066.0
+        "Value": 13085304.0
       },
       {
         "TIME": 2022,
         "Territorio": "Italia",
         "Tipo dato": "superficie totale - ettari",
         "Title": "superficie totale - ettari - Italia",
-        "Value": 13193503.0
+        "Value": 12925540.0
       },
       {
         "TIME": 2023,
         "Territorio": "Italia",
         "Tipo dato": "superficie totale - ettari",
         "Title": "superficie totale - ettari - Italia",
-        "Value": 13072153.0
+        "Value": 12781851.0
       },
       {
         "TIME": 2006,
@@ -792,7 +792,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_1"
+        "view_9"
       ]
     }
   ],
@@ -842,7 +842,7 @@
           "mark": {
             "type": "line"
           },
-          "name": "view_1",
+          "name": "view_9",
           "transform": [
             {
               "filter": {
