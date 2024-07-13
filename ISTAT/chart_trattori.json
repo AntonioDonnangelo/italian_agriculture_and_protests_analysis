@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "background": "none",
   "config": {
     "view": {
       "continuousHeight": 300,
@@ -7,7 +8,7 @@
     }
   },
   "datasets": {
-    "data-fee803011b41045d59b721d292eea8ec": [
+    "data-ea487ab5e2959889f4816fedebeec133": [
       {
         "Comune": "scerni",
         "Lat": 42.1042,
@@ -758,6 +759,27 @@
         "codice_regione": 13
       },
       {
+        "Comune": "cagliari",
+        "Lat": 39.2305,
+        "Long": 9.1192,
+        "Regione": "Sardegna",
+        "codice_regione": 14
+      },
+      {
+        "Comune": "olbia",
+        "Lat": 40.9234,
+        "Long": 9.498,
+        "Regione": "Sardegna",
+        "codice_regione": 14
+      },
+      {
+        "Comune": "sassari",
+        "Lat": 40.7259,
+        "Long": 8.5555,
+        "Regione": "Sardegna",
+        "codice_regione": 14
+      },
+      {
         "Comune": "menfi",
         "Lat": 37.6041,
         "Long": 12.9689,
@@ -962,7 +984,7 @@
       }
     ]
   },
-  "height": 600,
+  "height": 800,
   "layer": [
     {
       "data": {
@@ -981,7 +1003,7 @@
     },
     {
       "data": {
-        "name": "data-fee803011b41045d59b721d292eea8ec"
+        "name": "data-ea487ab5e2959889f4816fedebeec133"
       },
       "encoding": {
         "latitude": {
@@ -1005,5 +1027,5 @@
       }
     }
   ],
-  "width": 1200
+  "width": 800
 }
