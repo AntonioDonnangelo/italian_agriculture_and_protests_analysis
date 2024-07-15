@@ -1,0 +1,289 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "data-7da319974f33fedc811097b0e6edf45a"
+  },
+  "datasets": {
+    "data-7da319974f33fedc811097b0e6edf45a": [
+      {
+        "group": "Agricoltura",
+        "name": "Agricoltura",
+        "value": 7060
+      },
+      {
+        "group": "Agricoltura",
+        "name": "Allevamento",
+        "value": 435
+      },
+      {
+        "group": "Agricoltura",
+        "name": "Industria",
+        "value": 217
+      },
+      {
+        "group": "Agricoltura",
+        "name": "Pesca (attivit\u00e0)",
+        "value": 160
+      },
+      {
+        "group": "Agricoltura",
+        "name": "Artigianato",
+        "value": 44
+      },
+      {
+        "group": "Europa",
+        "name": "Italia",
+        "value": 7971
+      },
+      {
+        "group": "Europa",
+        "name": "Europa",
+        "value": 3111
+      },
+      {
+        "group": "Europa",
+        "name": "Germania",
+        "value": 1290
+      },
+      {
+        "group": "Europa",
+        "name": "Francia",
+        "value": 1142
+      },
+      {
+        "group": "Europa",
+        "name": "Spagna",
+        "value": 242
+      },
+      {
+        "group": "Dio",
+        "name": "Dio",
+        "value": 4166
+      },
+      {
+        "group": "Dio",
+        "name": "Verit\u00e0",
+        "value": 455
+      },
+      {
+        "group": "Dio",
+        "name": "Libert\u00e0",
+        "value": 412
+      },
+      {
+        "group": "Dio",
+        "name": "Giustizia",
+        "value": 264
+      },
+      {
+        "group": "Dio",
+        "name": "Coraggio",
+        "value": 212
+      },
+      {
+        "group": "Societ\u00e0",
+        "name": "Politica",
+        "value": 1826
+      },
+      {
+        "group": "Societ\u00e0",
+        "name": "Lavoro",
+        "value": 1074
+      },
+      {
+        "group": "Societ\u00e0",
+        "name": "Famiglia",
+        "value": 493
+      },
+      {
+        "group": "Societ\u00e0",
+        "name": "Tradizione",
+        "value": 482
+      },
+      {
+        "group": "Societ\u00e0",
+        "name": "Societ\u00e0",
+        "value": 240
+      },
+      {
+        "group": "Suolo",
+        "name": "Suolo",
+        "value": 1165
+      },
+      {
+        "group": "Suolo",
+        "name": "Alimento",
+        "value": 823
+      },
+      {
+        "group": "Suolo",
+        "name": "Letame",
+        "value": 756
+      },
+      {
+        "group": "Suolo",
+        "name": "Grano",
+        "value": 692
+      },
+      {
+        "group": "Suolo",
+        "name": "Trattore agricolo",
+        "value": 555
+      },
+      {
+        "group": "Gruppo di pressione",
+        "name": "Unione europea",
+        "value": 1719
+      },
+      {
+        "group": "Gruppo di pressione",
+        "name": "Sindacato",
+        "value": 1339
+      },
+      {
+        "group": "Gruppo di pressione",
+        "name": "Coldiretti",
+        "value": 761
+      },
+      {
+        "group": "Gruppo di pressione",
+        "name": "Multinazionale",
+        "value": 583
+      },
+      {
+        "group": "Gruppo di pressione",
+        "name": "Corruzione",
+        "value": 378
+      },
+      {
+        "group": "Roma",
+        "name": "Roma",
+        "value": 2725
+      },
+      {
+        "group": "Roma",
+        "name": "Bruxelles",
+        "value": 1026
+      },
+      {
+        "group": "Roma",
+        "name": "Provincia di Siena",
+        "value": 437
+      },
+      {
+        "group": "Roma",
+        "name": "Sicilia",
+        "value": 391
+      },
+      {
+        "group": "Roma",
+        "name": "Sanremo",
+        "value": 238
+      }
+    ]
+  },
+  "params": [
+    {
+      "bind": {
+        "input": "select",
+        "name": "Seleziona argomento ",
+        "options": [
+          "Agricoltura",
+          "Dio",
+          "Europa",
+          "Gruppo di pressione",
+          "Roma",
+          "Societ\u00e0",
+          "Suolo"
+        ]
+      },
+      "name": "SelectGroup",
+      "select": {
+        "fields": [
+          "group"
+        ],
+        "type": "point"
+      },
+      "value": "Gruppo di pressione",
+      "views": [
+        "view_1"
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "encoding": {
+        "text": {
+          "field": "group",
+          "type": "nominal"
+        }
+      },
+      "height": 30,
+      "mark": {
+        "align": "center",
+        "dy": -15,
+        "fontSize": 20,
+        "type": "text"
+      },
+      "transform": [
+        {
+          "filter": {
+            "param": "SelectGroup"
+          }
+        }
+      ],
+      "width": 600
+    },
+    {
+      "height": 600,
+      "layer": [
+        {
+          "encoding": {
+            "color": {
+              "field": "value",
+              "scale": {
+                "scheme": "blues"
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "value",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "value",
+              "title": "frequenza",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "name",
+              "sort": "-x",
+              "title": "entit\u00e0",
+              "type": "nominal"
+            }
+          },
+          "mark": {
+            "type": "bar"
+          },
+          "name": "view_1",
+          "transform": [
+            {
+              "filter": {
+                "param": "SelectGroup"
+              }
+            }
+          ]
+        }
+      ],
+      "width": 800
+    }
+  ]
+}
