@@ -665,7 +665,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_4"
+        "view_1"
       ]
     }
   ],
@@ -708,14 +708,18 @@
             },
             "y": {
               "field": "Valore",
+              "scale": {
+                "zero": false
+              },
               "title": "Valore",
               "type": "quantitative"
             }
           },
           "mark": {
+            "interpolate": "monotone",
             "type": "line"
           },
-          "name": "view_4",
+          "name": "view_1",
           "transform": [
             {
               "filter": {
@@ -754,6 +758,7 @@
               },
               {
                 "field": "Valore",
+                "format": ",",
                 "type": "quantitative"
               }
             ],
