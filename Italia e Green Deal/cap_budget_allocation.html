@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "Category", "type": "nominal"}, "x": {"field": "Amount (\u20ac billion)", "type": "quantitative"}, "y": {"field": "Category", "sort": "-x", "type": "nominal"}}, "title": "CAP Budget Allocation (2013)"}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 3}, "encoding": {"color": {"field": "Category", "type": "nominal"}, "text": {"field": "Amount (\u20ac billion)", "type": "quantitative"}, "x": {"field": "Amount (\u20ac billion)", "type": "quantitative"}, "y": {"field": "Category", "sort": "-x", "type": "nominal"}}, "title": "CAP Budget Allocation (2013)"}], "data": {"name": "data-952e54366f4ddcf5a9cf2ef3600c9f03"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-952e54366f4ddcf5a9cf2ef3600c9f03": [{"Category": "Total CAP Budget", "Percentage (%)": 100.0, "Amount (\u20ac billion)": 57.0}, {"Category": "Food for consumption by households", "Percentage (%)": 84.0, "Amount (\u20ac billion)": 47.88}, {"Category": "Agricultural losses", "Percentage (%)": 1.5, "Amount (\u20ac billion)": 0.855}, {"Category": "Other uses (biofuels, fibres)", "Percentage (%)": 14.5, "Amount (\u20ac billion)": 8.265}, {"Category": "Domestically consumed CAP subsidies", "Percentage (%)": 63.0, "Amount (\u20ac billion)": 35.91}, {"Category": "Traded within the EU", "Percentage (%)": 23.0, "Amount (\u20ac billion)": 13.11}, {"Category": "Exported to non-EU countries", "Percentage (%)": 12.0, "Amount (\u20ac billion)": 6.84}, {"Category": "Subsidies for food production", "Percentage (%)": 82.0, "Amount (\u20ac billion)": 39.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
