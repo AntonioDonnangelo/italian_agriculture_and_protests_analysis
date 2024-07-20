@@ -1,9 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
-    "view": {
-      "continuousHeight": 300,
-      "continuousWidth": 300
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "background": "transparent",
+    "title": {
+      "anchor": "start",
+      "color": "black",
+      "fontSize": 20
     }
   },
   "data": {
@@ -665,7 +671,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_1"
+        "view_5"
       ]
     }
   ],
@@ -698,9 +704,6 @@
       "layer": [
         {
           "encoding": {
-            "color": {
-              "value": "#5F9EA0"
-            },
             "x": {
               "field": "Anno",
               "title": "Anno",
@@ -716,10 +719,11 @@
             }
           },
           "mark": {
+            "color": "#188FE1",
             "interpolate": "monotone",
             "type": "line"
           },
-          "name": "view_1",
+          "name": "view_5",
           "transform": [
             {
               "filter": {
@@ -734,8 +738,8 @@
               "field": "Valore",
               "scale": {
                 "range": [
-                  "#66c2a4",
-                  "#005824"
+                  "#99f4be",
+                  "#18E169"
                 ]
               },
               "type": "quantitative"
