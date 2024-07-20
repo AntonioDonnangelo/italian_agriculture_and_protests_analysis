@@ -1,16 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
-    "view": {
-      "continuousHeight": 300,
-      "continuousWidth": 300
+    "axis": {
+      "labelFontSize": 16,
+      "titleFontSize": 14
+    },
+    "background": "transparent",
+    "title": {
+      "anchor": "start",
+      "color": "black",
+      "fontSize": 20
     }
   },
   "data": {
-    "name": "data-7da319974f33fedc811097b0e6edf45a"
+    "name": "data-d77a7879f30713ad73f3323785f17260"
   },
   "datasets": {
-    "data-7da319974f33fedc811097b0e6edf45a": [
+    "data-d77a7879f30713ad73f3323785f17260": [
       {
         "group": "Agricoltura",
         "name": "Agricoltura",
@@ -43,11 +49,6 @@
       },
       {
         "group": "Europa",
-        "name": "Europa",
-        "value": 3111
-      },
-      {
-        "group": "Europa",
         "name": "Germania",
         "value": 1290
       },
@@ -62,27 +63,32 @@
         "value": 242
       },
       {
-        "group": "Dio",
+        "group": "Europa",
+        "name": "Ucraina",
+        "value": 181
+      },
+      {
+        "group": "Religione",
         "name": "Dio",
         "value": 4166
       },
       {
-        "group": "Dio",
+        "group": "Religione",
         "name": "Verit\u00e0",
         "value": 455
       },
       {
-        "group": "Dio",
+        "group": "Religione",
         "name": "Libert\u00e0",
         "value": 412
       },
       {
-        "group": "Dio",
+        "group": "Religione",
         "name": "Giustizia",
         "value": 264
       },
       {
-        "group": "Dio",
+        "group": "Religione",
         "name": "Coraggio",
         "value": 212
       },
@@ -98,6 +104,11 @@
       },
       {
         "group": "Societ\u00e0",
+        "name": "Governo",
+        "value": 916
+      },
+      {
+        "group": "Societ\u00e0",
         "name": "Famiglia",
         "value": 493
       },
@@ -105,16 +116,6 @@
         "group": "Societ\u00e0",
         "name": "Tradizione",
         "value": 482
-      },
-      {
-        "group": "Societ\u00e0",
-        "name": "Societ\u00e0",
-        "value": 240
-      },
-      {
-        "group": "Suolo",
-        "name": "Suolo",
-        "value": 1165
       },
       {
         "group": "Suolo",
@@ -125,6 +126,11 @@
         "group": "Suolo",
         "name": "Letame",
         "value": 756
+      },
+      {
+        "group": "Suolo",
+        "name": "Frutta",
+        "value": 696
       },
       {
         "group": "Suolo",
@@ -163,11 +169,6 @@
       },
       {
         "group": "Roma",
-        "name": "Roma",
-        "value": 2725
-      },
-      {
-        "group": "Roma",
         "name": "Bruxelles",
         "value": 1026
       },
@@ -185,6 +186,11 @@
         "group": "Roma",
         "name": "Sanremo",
         "value": 238
+      },
+      {
+        "group": "Roma",
+        "name": "Sardegna",
+        "value": 222
       }
     ]
   },
@@ -195,9 +201,9 @@
         "name": "Seleziona argomento ",
         "options": [
           "Agricoltura",
-          "Dio",
           "Europa",
           "Gruppo di pressione",
+          "Religione",
           "Roma",
           "Societ\u00e0",
           "Suolo"
@@ -212,7 +218,7 @@
       },
       "value": "Gruppo di pressione",
       "views": [
-        "view_1"
+        "view_10"
       ]
     }
   ],
@@ -247,8 +253,13 @@
           "encoding": {
             "color": {
               "field": "value",
+              "legend": null,
               "scale": {
-                "scheme": "blues"
+                "interpolate": "hsl",
+                "scheme": [
+                  "#c6f9db",
+                  "#18E169"
+                ]
               },
               "type": "quantitative"
             },
@@ -273,7 +284,7 @@
           "mark": {
             "type": "bar"
           },
-          "name": "view_1",
+          "name": "view_10",
           "transform": [
             {
               "filter": {
