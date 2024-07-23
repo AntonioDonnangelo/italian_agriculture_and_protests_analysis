@@ -682,7 +682,7 @@
       },
       "value": "produzione raccolta - quintali",
       "views": [
-        "view_1"
+        "view_3"
       ]
     }
   ],
@@ -697,6 +697,7 @@
       "height": 30,
       "mark": {
         "align": "center",
+        "color": "#E0E0E0",
         "dy": -15,
         "fontSize": 20,
         "type": "text"
@@ -708,7 +709,7 @@
           }
         }
       ],
-      "width": 600
+      "width": "container"
     },
     {
       "height": 400,
@@ -734,7 +735,7 @@
             "interpolate": "monotone",
             "type": "line"
           },
-          "name": "view_1",
+          "name": "view_3",
           "transform": [
             {
               "filter": {
@@ -805,7 +806,7 @@
           ]
         }
       ],
-      "width": 600
+      "width": "container"
     }
   ]
 }
