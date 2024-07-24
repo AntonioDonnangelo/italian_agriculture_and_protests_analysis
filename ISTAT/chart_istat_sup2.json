@@ -428,7 +428,7 @@
       },
       "value": "superficie in produzione - ettari",
       "views": [
-        "view_7"
+        "view_2"
       ]
     }
   ],
@@ -443,6 +443,7 @@
       "height": 30,
       "mark": {
         "align": "center",
+        "color": "#E0E0E0",
         "dy": -15,
         "fontSize": 20,
         "type": "text"
@@ -480,7 +481,7 @@
             "interpolate": "monotone",
             "type": "line"
           },
-          "name": "view_7",
+          "name": "view_2",
           "transform": [
             {
               "filter": {
