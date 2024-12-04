@@ -13,8 +13,8 @@ import time
 from random import uniform
 from bs4 import BeautifulSoup
 import csv
-import comments_module
-import live_comments_module
+import comments_module as comments_module
+import live_comments_module as live_comments_module
 import os
 import fbdate_to_date
 
