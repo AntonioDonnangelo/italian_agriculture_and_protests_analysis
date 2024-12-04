@@ -1,0 +1,208 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "background": "transparent",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300,
+      "stroke": null
+    }
+  },
+  "data": {
+    "format": {
+      "feature": "regions",
+      "type": "topojson"
+    },
+    "url": "https://raw.githubusercontent.com/openpolis/geojson-italy/master/topojson/limits_IT_all.topo.json"
+  },
+  "datasets": {
+    "data-8292401c050acaf54af0e79afd72b753": [
+      {
+        "Conteggio": 7.0,
+        "Regione": "Abruzzo",
+        "codice_regione": 13,
+        "lat": "42.227681",
+        "long": "13.854983"
+      },
+      {
+        "Conteggio": 1.0,
+        "Regione": "Basilicata",
+        "codice_regione": 17,
+        "lat": "40.500571",
+        "long": "16.081953"
+      },
+      {
+        "Conteggio": 6.0,
+        "Regione": "Calabria",
+        "codice_regione": 18,
+        "lat": "39.0565974",
+        "long": "16.5249864"
+      },
+      {
+        "Conteggio": 16.0,
+        "Regione": "Campania",
+        "codice_regione": 15,
+        "lat": "40.860672",
+        "long": "14.843984"
+      },
+      {
+        "Conteggio": 21.0,
+        "Regione": "Emilia-Romagna",
+        "codice_regione": 8,
+        "lat": "44.525696",
+        "long": "11.039437"
+      },
+      {
+        "Conteggio": 2.0,
+        "Regione": "Friuli-Venezia Giulia",
+        "codice_regione": 6,
+        "lat": "46.151042",
+        "long": "13.055904"
+      },
+      {
+        "Conteggio": 15.0,
+        "Regione": "Lazio",
+        "codice_regione": 12,
+        "lat": "41.9808038",
+        "long": "12.7662312"
+      },
+      {
+        "Conteggio": 1.0,
+        "Regione": "Liguria",
+        "codice_regione": 7,
+        "lat": "44.4777617",
+        "long": "8.7026296"
+      },
+      {
+        "Conteggio": 12.0,
+        "Regione": "Lombardia",
+        "codice_regione": 3,
+        "lat": "45.5703694",
+        "long": "9.7732524"
+      },
+      {
+        "Conteggio": 1.0,
+        "Regione": "Marche",
+        "codice_regione": 11,
+        "lat": "43.3458388",
+        "long": "13.1415872"
+      },
+      {
+        "Conteggio": 0.0,
+        "Regione": "Molise",
+        "codice_regione": 14,
+        "lat": "41.684672",
+        "long": "14.595614"
+      },
+      {
+        "Conteggio": 3.0,
+        "Regione": "Piemonte",
+        "codice_regione": 1,
+        "lat": "45.060735",
+        "long": "7.923549"
+      },
+      {
+        "Conteggio": 18.0,
+        "Regione": "Puglia",
+        "codice_regione": 16,
+        "lat": "40.9842539",
+        "long": "16.6210027"
+      },
+      {
+        "Conteggio": 3.0,
+        "Regione": "Sardegna",
+        "codice_regione": 20,
+        "lat": "40.0912813",
+        "long": "9.0305773"
+      },
+      {
+        "Conteggio": 10.0,
+        "Regione": "Sicilia",
+        "codice_regione": 19,
+        "lat": "37.587794",
+        "long": "14.155048"
+      },
+      {
+        "Conteggio": 9.0,
+        "Regione": "Toscana",
+        "codice_regione": 9,
+        "lat": "43.4586541",
+        "long": "11.1389204"
+      },
+      {
+        "Conteggio": 3.0,
+        "Regione": "Trentino-Alto Adige",
+        "codice_regione": 4,
+        "lat": "46.441472",
+        "long": "11.282121"
+      },
+      {
+        "Conteggio": 3.0,
+        "Regione": "Umbria",
+        "codice_regione": 10,
+        "lat": "42.965916",
+        "long": "12.490236"
+      },
+      {
+        "Conteggio": 0.0,
+        "Regione": "Valle d'Aosta",
+        "codice_regione": 2,
+        "lat": "45.730099",
+        "long": "7.387426"
+      },
+      {
+        "Conteggio": 8.0,
+        "Regione": "Veneto",
+        "codice_regione": 5,
+        "lat": "45.6476663",
+        "long": "11.8665254"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "Conteggio",
+      "legend": null,
+      "scale": {
+        "scheme": "greens",
+        "type": "quantize"
+      },
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Conteggio",
+        "type": "quantitative"
+      },
+      {
+        "field": "Regione",
+        "type": "nominal"
+      }
+    ]
+  },
+  "height": 400,
+  "mark": {
+    "stroke": "#fff",
+    "strokeWidth": 0.25,
+    "type": "geoshape"
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "transform": [
+    {
+      "from": {
+        "data": {
+          "name": "data-8292401c050acaf54af0e79afd72b753"
+        },
+        "fields": [
+          "Regione",
+          "Conteggio"
+        ],
+        "key": "codice_regione"
+      },
+      "lookup": "properties.reg_istat_code_num"
+    }
+  ],
+  "width": 400
+}

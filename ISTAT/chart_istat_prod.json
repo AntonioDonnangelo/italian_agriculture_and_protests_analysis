@@ -1,0 +1,346 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "config": {
+    "axis": {
+      "domainColor": "#B0B0B0",
+      "gridColor": "#333333",
+      "labelColor": "#E0E0E0",
+      "labelFontSize": 12,
+      "tickColor": "#B0B0B0",
+      "titleColor": "#E0E0E0",
+      "titleFontSize": 14
+    },
+    "background": "#121212",
+    "legend": {
+      "labelColor": "#E0E0E0",
+      "titleColor": "#E0E0E0"
+    },
+    "mark": {
+      "color": "#1f77b4"
+    },
+    "title": {
+      "color": "#E0E0E0",
+      "fontSize": 20
+    }
+  },
+  "data": {
+    "name": "data-cd492f7d324f4740d396227e0ccf1622"
+  },
+  "datasets": {
+    "data-cd492f7d324f4740d396227e0ccf1622": [
+      {
+        "Anno": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1455787372.0
+      },
+      {
+        "Anno": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1419869699.0
+      },
+      {
+        "Anno": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1377085340.0
+      },
+      {
+        "Anno": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1346450108.0
+      },
+      {
+        "Anno": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1355508369.0
+      },
+      {
+        "Anno": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1351529479.0
+      },
+      {
+        "Anno": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1142768824.0
+      },
+      {
+        "Anno": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1228512238.0
+      },
+      {
+        "Anno": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1322871385.0
+      },
+      {
+        "Anno": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1271544105.0
+      },
+      {
+        "Anno": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1318554571.0
+      },
+      {
+        "Anno": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1200748703.0
+      },
+      {
+        "Anno": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1288116241.0
+      },
+      {
+        "Anno": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1296323142.0
+      },
+      {
+        "Anno": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1388759007.0
+      },
+      {
+        "Anno": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1377247009.0
+      },
+      {
+        "Anno": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1244706899.0
+      },
+      {
+        "Anno": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione raccolta - quintali",
+        "Title": "produzione raccolta - quintali - Italia",
+        "Valore": 1258298345.0
+      },
+      {
+        "Anno": 2006,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1475891393.0
+      },
+      {
+        "Anno": 2007,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1438757503.0
+      },
+      {
+        "Anno": 2008,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1394624783.0
+      },
+      {
+        "Anno": 2009,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1365348943.0
+      },
+      {
+        "Anno": 2010,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1374175679.0
+      },
+      {
+        "Anno": 2011,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1368206891.0
+      },
+      {
+        "Anno": 2012,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1159719513.0
+      },
+      {
+        "Anno": 2013,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1244776649.0
+      },
+      {
+        "Anno": 2014,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1344248174.0
+      },
+      {
+        "Anno": 2015,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1288922345.0
+      },
+      {
+        "Anno": 2016,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1335869341.0
+      },
+      {
+        "Anno": 2017,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1216191920.6
+      },
+      {
+        "Anno": 2018,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1306011662.0
+      },
+      {
+        "Anno": 2019,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1310940857.0
+      },
+      {
+        "Anno": 2020,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1399782489.0
+      },
+      {
+        "Anno": 2021,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1384178354.0
+      },
+      {
+        "Anno": 2022,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1247172780.0
+      },
+      {
+        "Anno": 2023,
+        "Territorio": "Italia",
+        "Tipo dato": "produzione totale - quintali",
+        "Title": "produzione totale - quintali - Italia",
+        "Valore": 1272136502.0
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "Valore",
+      "scale": {
+        "range": [
+          "#99f4be",
+          "#18E169"
+        ]
+      },
+      "type": "quantitative"
+    },
+    "size": {
+      "field": "Valore",
+      "legend": null,
+      "scale": {
+        "range": [
+          20,
+          300
+        ]
+      },
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Anno",
+        "type": "nominal"
+      },
+      {
+        "field": "Valore",
+        "format": ",",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {
+        "labelAlign": "center",
+        "labelAngle": 0,
+        "labelBaseline": "top"
+      },
+      "field": "Anno",
+      "title": "Anno",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Valore",
+      "title": "Valore",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "mark": {
+    "type": "circle"
+  },
+  "transform": [
+    {
+      "filter": {
+        "param": "SelectTipoDato"
+      }
+    }
+  ],
+  "width": 600
+}

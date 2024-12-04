@@ -408,150 +408,65 @@
       }
     ]
   },
-  "params": [
-    {
-      "bind": {
-        "input": "select",
-        "name": " ",
-        "options": [
-          "superficie in produzione - ettari",
-          "superficie totale - are",
-          "superficie totale - ettari"
+  "encoding": {
+    "color": {
+      "field": "Valore",
+      "scale": {
+        "range": [
+          "#99f4be",
+          "#18E169"
         ]
       },
-      "name": "SelectTipoDato",
-      "select": {
-        "fields": [
-          "Tipo dato"
-        ],
-        "type": "point"
+      "type": "quantitative"
+    },
+    "size": {
+      "field": "Valore",
+      "legend": null,
+      "scale": {
+        "range": [
+          20,
+          300
+        ]
       },
-      "value": "superficie in produzione - ettari",
-      "views": [
-        "view_7"
-      ]
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Anno",
+        "type": "nominal"
+      },
+      {
+        "field": "Valore",
+        "format": ",",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {
+        "labelAlign": "center",
+        "labelAngle": 0,
+        "labelBaseline": "top"
+      },
+      "field": "Anno",
+      "title": "Anno",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Valore",
+      "title": "Valore",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "mark": {
+    "type": "circle"
+  },
+  "transform": [
+    {
+      "filter": {
+        "param": "SelectTipoDato"
+      }
     }
   ],
-  "vconcat": [
-    {
-      "encoding": {
-        "text": {
-          "field": "Title",
-          "type": "nominal"
-        }
-      },
-      "height": 30,
-      "mark": {
-        "align": "center",
-        "dy": -15,
-        "fontSize": 20,
-        "type": "text"
-      },
-      "transform": [
-        {
-          "filter": {
-            "param": "SelectTipoDato"
-          }
-        }
-      ],
-      "width": 600
-    },
-    {
-      "height": 400,
-      "layer": [
-        {
-          "encoding": {
-            "x": {
-              "field": "Anno",
-              "title": "Anno",
-              "type": "nominal"
-            },
-            "y": {
-              "field": "Valore",
-              "scale": {
-                "zero": false
-              },
-              "title": "Valore",
-              "type": "quantitative"
-            }
-          },
-          "mark": {
-            "color": "#188FE1",
-            "interpolate": "monotone",
-            "type": "line"
-          },
-          "name": "view_7",
-          "transform": [
-            {
-              "filter": {
-                "param": "SelectTipoDato"
-              }
-            }
-          ]
-        },
-        {
-          "encoding": {
-            "color": {
-              "field": "Valore",
-              "scale": {
-                "range": [
-                  "#99f4be",
-                  "#18E169"
-                ]
-              },
-              "type": "quantitative"
-            },
-            "size": {
-              "field": "Valore",
-              "legend": null,
-              "scale": {
-                "range": [
-                  20,
-                  300
-                ]
-              },
-              "type": "quantitative"
-            },
-            "tooltip": [
-              {
-                "field": "Anno",
-                "type": "nominal"
-              },
-              {
-                "field": "Valore",
-                "format": ",",
-                "type": "quantitative"
-              }
-            ],
-            "x": {
-              "axis": {
-                "labelAlign": "center",
-                "labelAngle": 0,
-                "labelBaseline": "top"
-              },
-              "field": "Anno",
-              "title": "Anno",
-              "type": "nominal"
-            },
-            "y": {
-              "field": "Valore",
-              "title": "Valore",
-              "type": "quantitative"
-            }
-          },
-          "mark": {
-            "type": "circle"
-          },
-          "transform": [
-            {
-              "filter": {
-                "param": "SelectTipoDato"
-              }
-            }
-          ]
-        }
-      ],
-      "width": 600
-    }
-  ]
+  "width": 600
 }
