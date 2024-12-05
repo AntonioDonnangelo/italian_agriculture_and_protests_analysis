@@ -1,0 +1,787 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json",
+  "config": {
+    "axis": {
+      "domainColor": "#B0B0B0",
+      "gridColor": "#333333",
+      "labelColor": "#E0E0E0",
+      "labelFontSize": 12,
+      "tickColor": "#B0B0B0",
+      "titleColor": "#E0E0E0",
+      "titleFontSize": 14
+    },
+    "background": "#121212",
+    "legend": {
+      "labelColor": "#E0E0E0",
+      "titleColor": "#E0E0E0"
+    },
+    "mark": {
+      "color": "#1f77b4"
+    },
+    "title": {
+      "color": "#E0E0E0",
+      "fontSize": 20
+    }
+  },
+  "data": {
+    "name": "data-a98a6745abf8d7049c1cf66bf5fbc466"
+  },
+  "datasets": {
+    "data-a98a6745abf8d7049c1cf66bf5fbc466": [
+      {
+        "Anno": "2015",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 16643
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 8605
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 4212
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 10239
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 1980
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1067
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 25217
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1257
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 1856
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 4725
+      },
+      {
+        "Anno": "2015",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 38547
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 23614
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 6975
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 969
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 5639
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 2632
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1363
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 26183
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1603
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2392
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 4431
+      },
+      {
+        "Anno": "2016",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 37589
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 16142
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 7102
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1312
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 11286
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 2113
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1675
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 27769
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1375
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 1997
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 5030
+      },
+      {
+        "Anno": "2017",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 39901
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 15399
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 15879
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1754
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 8334
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 3399
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1586
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 21560
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1581
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2061
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 4248
+      },
+      {
+        "Anno": "2018",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 41687
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 11102
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 15464
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1310
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 14689
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 4683
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1653
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 18932
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 2195
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2818
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 2955
+      },
+      {
+        "Anno": "2019",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 37351
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 15149
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 11636
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1401
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 10393
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 3771
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1386
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 25021
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1656
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2118
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 3270
+      },
+      {
+        "Anno": "2020",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 39927
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 15365
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 10564
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1412
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 10752
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 2770
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1520
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 25644
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1758
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2475
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 3541
+      },
+      {
+        "Anno": "2021",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 39749
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 16148
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 11526
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 1343
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 7876
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 3738
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1416
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 26367
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1793
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2671
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 2923
+      },
+      {
+        "Anno": "2022",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 40816
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Foresta",
+        "Title": "Foresta - Toscana",
+        "Valore": 15249
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Pascolo",
+        "Title": "Pascolo - Toscana",
+        "Valore": 14408
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Lago",
+        "Title": "Lago - Toscana",
+        "Valore": 2005
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Vegetazione Erbacea",
+        "Title": "Vegetazione Erbacea - Toscana",
+        "Valore": 9240
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Fiumi",
+        "Title": "Fiumi - Toscana",
+        "Valore": 3341
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Strade",
+        "Title": "Strade - Toscana",
+        "Valore": 1208
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Colture Permanenti",
+        "Title": "Colture Permanenti - Toscana",
+        "Valore": 22648
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Aree Industriali",
+        "Title": "Aree Industriali - Toscana",
+        "Valore": 1806
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Zone Residenziali",
+        "Title": "Zone Residenziali - Toscana",
+        "Valore": 2478
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Colture Annuali",
+        "Title": "Colture Annuali - Toscana",
+        "Valore": 3418
+      },
+      {
+        "Anno": "2023",
+        "Tipo dato": "Totale Zone Agricole",
+        "Title": "Totale Zone Agricole - Toscana",
+        "Valore": 40474
+      }
+    ]
+  },
+  "params": [
+    {
+      "bind": {
+        "input": "select",
+        "name": " ",
+        "options": [
+          "Aree Industriali",
+          "Colture Annuali",
+          "Colture Permanenti",
+          "Fiumi",
+          "Foresta",
+          "Lago",
+          "Pascolo",
+          "Strade",
+          "Totale Zone Agricole",
+          "Vegetazione Erbacea",
+          "Zone Residenziali"
+        ]
+      },
+      "name": "SelectTipoDato",
+      "select": {
+        "fields": [
+          "Tipo dato"
+        ],
+        "type": "point"
+      },
+      "value": "Aree Industriali",
+      "views": [
+        "view_11"
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "encoding": {
+        "text": {
+          "field": "Title",
+          "type": "nominal"
+        }
+      },
+      "height": 30,
+      "mark": {
+        "align": "center",
+        "color": "#E0E0E0",
+        "dy": -15,
+        "fontSize": 20,
+        "type": "text"
+      },
+      "transform": [
+        {
+          "filter": {
+            "param": "SelectTipoDato"
+          }
+        }
+      ],
+      "width": 600
+    },
+    {
+      "height": 400,
+      "layer": [
+        {
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "Anno",
+                "type": "nominal"
+              },
+              {
+                "field": "Valore",
+                "format": ",",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Anno",
+              "title": "Anno",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Valore",
+              "scale": {
+                "zero": false
+              },
+              "title": "Predizioni",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "color": "#188FE1",
+            "interpolate": "monotone",
+            "type": "line"
+          },
+          "name": "view_11",
+          "transform": [
+            {
+              "filter": {
+                "param": "SelectTipoDato"
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Valore",
+              "legend": null,
+              "scale": {
+                "range": [
+                  "#99f4be",
+                  "#18E169"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "Valore",
+              "legend": null,
+              "scale": {
+                "range": [
+                  20,
+                  300
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Anno",
+                "type": "nominal"
+              },
+              {
+                "field": "Valore",
+                "format": ",",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Anno",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Valore",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "type": "circle"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "SelectTipoDato"
+              }
+            }
+          ]
+        }
+      ],
+      "width": 600
+    }
+  ]
+}
