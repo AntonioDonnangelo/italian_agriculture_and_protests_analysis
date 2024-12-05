@@ -4,7 +4,7 @@
 - in *satellite_image_analysis*, we trained a deep convolutional neural network to classify land use and track its changes over time, providing valuable insights into the evolution of agricultural landscapes.
 - *scraping_and_text_analysis* contains scripts used to collect data from Facebook and local news outlets, along with tools for conducting textual analysis of Facebook comments, shedding light on public sentiment and discourse.
 
-The findings from our work were synthesized into a data-driven journalism article, which is available at the following link.
+The findings from our work were synthesized into a data-driven journalism article, which is available at the following [link](https://rconti95.github.io/g6-2024-website/).
 
 🎓 Wrapping up our Master in Big Data & Artificial Intelligence for Society!
 
